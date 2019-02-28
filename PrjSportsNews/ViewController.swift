@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import GoogleMobileAds
 
 struct NewsItem {
     var title: String? // News title
@@ -146,6 +147,10 @@ class ViewController: UIViewController{
     @IBOutlet weak var upCollectionView:    UICollectionView!
     @IBOutlet weak var downCollectionView:  UICollectionView!
 
+//    @IBOutlet weak var bannerView: GADBannerView!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     private var currenctIndexPath   : IndexPath!
     private var parseFailDict       : [String:Bool]?
     private var medias              = Media.getAllMedia()
@@ -225,10 +230,19 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bannerInit()
         self.updateDataSource()
         self.updateUI()
     }
-
+    
+    private func bannerInit() {
+        bannerView.adUnitID = "ca-app-pub-2373410982348314/3824171467" // AD ID
+        //        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // AD test ID
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+    }
+    
     private func updateDataSource() {
         for index in 0...Media.getAllMedia().count - 1 {
             downloadXML(publishersInfo[index].address, index)
@@ -454,5 +468,15 @@ extension ViewController: TableCollectionViewCellDelegate {
         webviewViewController.linkFromVC = link
         webviewViewController.title      = publishersInfo[currenctIndexPath.row].publisher
         self.navigationController?.pushViewController(webviewViewController, animated: true)
+    }
+}
+
+extension ViewController: GADBannerViewDelegate {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("success")
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("fail")
     }
 }

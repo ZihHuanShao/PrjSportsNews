@@ -13,7 +13,7 @@
         <!--體育運動消息-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PrjSportsNews_v3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PrjSportsNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellA" id="QOg-BI-MA8" customClass="LabelCollectionViewCell" customModule="PrjSportsNews_v3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellA" id="QOg-BI-MA8" customClass="LabelCollectionViewCell" customModule="PrjSportsNews" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -59,7 +59,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-XM-Ho3">
-                                <rect key="frame" x="0.0" y="50" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rjN-XJ-x11">
                                     <size key="itemSize" width="375" height="554"/>
@@ -69,12 +69,22 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHm-Xk-BMc" customClass="GADBannerView">
+                                <rect key="frame" x="27.5" y="553" width="320" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="7Qq-Y0-kVF"/>
+                                    <constraint firstAttribute="height" constant="50" id="aZ8-nK-2Ld"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IHm-Xk-BMc" secondAttribute="bottom" id="B7O-Z5-HDZ"/>
                             <constraint firstItem="Ooe-Mj-BCD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GIs-hp-fF7"/>
-                            <constraint firstItem="kSA-XM-Ho3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RJZ-3j-BhV"/>
                             <constraint firstAttribute="trailing" secondItem="kSA-XM-Ho3" secondAttribute="trailing" id="bLn-Ib-u9u"/>
+                            <constraint firstItem="IHm-Xk-BMc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l4f-rc-Vgm"/>
+                            <constraint firstItem="IHm-Xk-BMc" firstAttribute="top" secondItem="kSA-XM-Ho3" secondAttribute="bottom" id="m4p-hL-M9W"/>
                             <constraint firstItem="kSA-XM-Ho3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nqb-y5-fEr"/>
                             <constraint firstItem="kSA-XM-Ho3" firstAttribute="top" secondItem="Ooe-Mj-BCD" secondAttribute="bottom" id="rIe-7w-Qay"/>
                             <constraint firstItem="Ooe-Mj-BCD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rgD-p8-5Hp"/>
@@ -99,18 +109,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bannerView" destination="IHm-Xk-BMc" id="mdb-7m-a6v"/>
                         <outlet property="downCollectionView" destination="kSA-XM-Ho3" id="yuq-e6-WgZ"/>
                         <outlet property="upCollectionView" destination="Ooe-Mj-BCD" id="SAh-sn-NO5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="16"/>
+            <point key="canvasLocation" x="624.79999999999995" y="15.742128935532236"/>
         </scene>
         <!--About Me View Controller-->
         <scene sceneID="VCN-bd-44W">
             <objects>
-                <viewController storyboardIdentifier="AboutMeViewController" id="Kp5-3d-nMd" customClass="AboutMeViewController" customModule="PrjSportsNews_v3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutMeViewController" id="Kp5-3d-nMd" customClass="AboutMeViewController" customModule="PrjSportsNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wSv-KN-bBG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +436,7 @@
         <!--Home View Controller-->
         <scene sceneID="gRr-tB-jem">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="ggd-k6-waa" customClass="HomeViewController" customModule="PrjSportsNews_v3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="ggd-k6-waa" customClass="HomeViewController" customModule="PrjSportsNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FLN-xQ-OBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -440,7 +451,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="w4V-Rz-XkF" customClass="HomeCollectionViewCell" customModule="PrjSportsNews_v3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="w4V-Rz-XkF" customClass="HomeCollectionViewCell" customModule="PrjSportsNews" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="516"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
