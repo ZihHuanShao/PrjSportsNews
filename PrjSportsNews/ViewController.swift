@@ -36,7 +36,6 @@ fileprivate enum Media: String {
     case udnJeremyLin       = "UDN(林書豪專區)"
     case udnMLB             = "UDN(MLB)"
     case udnBaseball        = "UDN(棒球)"
-    case udnFubonLLB        = "UDN(富邦盃少棒)"
     case udnRunnig          = "UDN(路跑)"
     case udnComprehensive   = "UDN(綜合)"
     case svNBA              = "運動視界(NBA)"
@@ -60,7 +59,7 @@ fileprivate enum Media: String {
     case svOthersports      = "運動視界(其他運動)"
     
     static func getAllMedia() -> [Media] {
-        return [.sa, .ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnHBL, udnNBA, udnBasketball, udnJeremyLin, udnMLB, udnBaseball, udnFubonLLB, udnRunnig, udnComprehensive, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
+        return [.sa, .ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnHBL, udnNBA, udnBasketball, udnJeremyLin, udnMLB, udnBaseball, udnRunnig, udnComprehensive, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
     }
     
     static func convertIndexToValue(_ index: Int) -> Media {
@@ -94,48 +93,46 @@ fileprivate enum Media: String {
         case 13:
             return .udnBaseball
         case 14:
-            return .udnFubonLLB
-        case 15:
             return .udnRunnig
-        case 16:
+        case 15:
             return .udnComprehensive
-        case 17:
+        case 16:
             return .svNBA
-        case 18:
+        case 17:
             return .svBasketball
-        case 19:
+        case 18:
             return .svMLB
-        case 20:
+        case 19:
             return .svCPBL
-        case 21:
+        case 20:
             return .svNPB
-        case 22:
+        case 21:
             return .svBaseball
-        case 23:
+        case 22:
             return .svTennis
-        case 24:
+        case 23:
             return .svVolleyball
-        case 25:
+        case 24:
             return .svFootball
-        case 26:
+        case 25:
             return .svBadminton
-        case 27:
+        case 26:
             return .svTabletennis
-        case 28:
+        case 27:
             return .svTrackandfield
-        case 29:
+        case 28:
             return .svSwimming
-        case 30:
+        case 29:
             return .svGolf
-        case 31:
+        case 30:
             return .svRunning
-        case 32:
+        case 31:
             return .svBike
-        case 33:
+        case 32:
             return .svTriathlon
-        case 34:
+        case 33:
             return .svXgames
-        case 35:
+        case 34:
             return .svOthersports
         default:
             fatalError()
@@ -172,7 +169,6 @@ class ViewController: UIViewController{
          PublishersInfo(publisher: "UDN(林書豪專區)"  , address: "https://udn.com/rssfeed/news/2/7227/7489?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(MLB)"       , address: "https://udn.com/rssfeed/news/2/7227/6999?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(棒球)"       , address: "https://udn.com/rssfeed/news/2/7227/7001?ch=news",       logo:"Udn_Icon-App-60x60"),
-         PublishersInfo(publisher: "UDN(富邦盃少棒)"  , address: "https://udn.com/rssfeed/news/2/7227/12834?ch=news",      logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(路跑)"       , address: "https://udn.com/rssfeed/news/2/7227/7879?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(綜合)"       , address: "https://udn.com/rssfeed/news/2/7227/7005?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "運動視界(NBA)"    , address: "https://www.sportsv.net/nba/feed",                       logo:"SportsVision_Icon-App-60x60"),
@@ -311,8 +307,6 @@ class ViewController: UIViewController{
                             self.allObjectDict[.udnMLB]             = rssParserDelegate.getResult()
                         case .udnBaseball:
                             self.allObjectDict[.udnBaseball]        = rssParserDelegate.getResult()
-                        case .udnFubonLLB:
-                            self.allObjectDict[.udnFubonLLB]        = rssParserDelegate.getResult()
                         case .udnRunnig:
                             self.allObjectDict[.udnRunnig]        = rssParserDelegate.getResult()
                         case .udnComprehensive:

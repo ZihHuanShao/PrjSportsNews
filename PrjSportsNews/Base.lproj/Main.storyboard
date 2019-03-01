@@ -488,7 +488,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6b-jy-pat">
                                 <rect key="frame" x="10" y="49.5" width="355" height="55.5"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="針對國內各家線上媒體, 匯集大部分以國內為主, 最新的運動體育相關消息">
+                                    <fragment content="針對國內各家線上媒體, 匯集大部分以國內為主, 最新的體育運動相關消息">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="PingFangTC-Regular"/>
