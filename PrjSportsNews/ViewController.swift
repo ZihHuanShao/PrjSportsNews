@@ -30,7 +30,6 @@ fileprivate enum Media: String {
     case cts                = "華視"
     case chinatimes         = "中時"
     case sina               = "新浪"
-    case udnHBL             = "UDN(HBL)"
     case udnNBA             = "UDN(NBA)"
     case udnBasketball      = "UDN(籃球)"
     case udnJeremyLin       = "UDN(林書豪專區)"
@@ -59,7 +58,7 @@ fileprivate enum Media: String {
     case svOthersports      = "運動視界(其他運動)"
     
     static func getAllMedia() -> [Media] {
-        return [.sa, .ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnHBL, udnNBA, udnBasketball, udnJeremyLin, udnMLB, udnBaseball, udnRunnig, udnComprehensive, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
+        return [.sa, .ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnNBA, udnBasketball, udnJeremyLin, udnMLB, udnBaseball, udnRunnig, udnComprehensive, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
     }
     
     static func convertIndexToValue(_ index: Int) -> Media {
@@ -80,59 +79,57 @@ fileprivate enum Media: String {
             return .chinatimes
         case 7:
             return .sina
-        case 8 :
-            return .udnHBL
-        case 9:
+        case 8:
             return .udnNBA
-        case 10:
+        case 9:
             return .udnBasketball
-        case 11:
+        case 10:
             return .udnJeremyLin
-        case 12:
+        case 11:
             return .udnMLB
-        case 13:
+        case 12:
             return .udnBaseball
-        case 14:
+        case 13:
             return .udnRunnig
-        case 15:
+        case 14:
             return .udnComprehensive
-        case 16:
+        case 15:
             return .svNBA
-        case 17:
+        case 16:
             return .svBasketball
-        case 18:
+        case 17:
             return .svMLB
-        case 19:
+        case 18:
             return .svCPBL
-        case 20:
+        case 19:
             return .svNPB
-        case 21:
+        case 20:
             return .svBaseball
-        case 22:
+        case 21:
             return .svTennis
-        case 23:
+        case 22:
             return .svVolleyball
-        case 24:
+        case 23:
             return .svFootball
-        case 25:
+        case 24:
             return .svBadminton
-        case 26:
+        case 25:
             return .svTabletennis
-        case 27:
+        case 26:
             return .svTrackandfield
-        case 28:
+        case 27:
             return .svSwimming
-        case 29:
+        case 28:
             return .svGolf
-        case 30:
+        case 29:
             return .svRunning
-        case 31:
+        case 30:
             return .svBike
-        case 32:
+        case 31:
             return .svTriathlon
-        case 33:
+        case 32:
             return .svXgames
-        case 34:
+        case 33:
             return .svOthersports
         default:
             fatalError()
@@ -160,7 +157,6 @@ class ViewController: UIViewController{
          PublishersInfo(publisher: "華視"            , address: "https://news.cts.com.tw/rss/sports.xml",                 logo:"Cts_Icon-App-60x60"),
          PublishersInfo(publisher: "中時"            , address: "https://www.chinatimes.com/rss/realtimenews-sport.xml",  logo:"Ct_Icon-App-60x60"),
          PublishersInfo(publisher: "新浪"            , address: "https://news.sina.com.tw/rss/sports/tw.xml",             logo:"Sina_Icon-App-60x60"),
-         PublishersInfo(publisher: "UDN(HBL)"       , address: "https://udn.com/rssfeed/news/2/7227/8688?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(NBA)"       , address: "https://udn.com/rssfeed/news/2/7227/7002?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(籃球)"       , address: "https://udn.com/rssfeed/news/2/7227/7003?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(林書豪專區)"  , address: "https://udn.com/rssfeed/news/2/7227/7489?ch=news",       logo:"Udn_Icon-App-60x60"),
@@ -290,8 +286,6 @@ class ViewController: UIViewController{
                             self.allObjectDict[.chinatimes]         = rssParserDelegate.getResult()
                         case .sina:
                             self.allObjectDict[.sina]               = rssParserDelegate.getResult()
-                        case .udnHBL:
-                            self.allObjectDict[.udnHBL]             = rssParserDelegate.getResult()
                         case .udnNBA:
                             self.allObjectDict[.udnNBA]             = rssParserDelegate.getResult()
                         case .udnBasketball:
