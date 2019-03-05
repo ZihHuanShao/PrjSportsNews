@@ -20,7 +20,6 @@ class TableViewCollectionViewCell: UICollectionViewCell {
     var indexPath                   : IndexPath!
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
         self.myTableView.delegate   = self
         self.myTableView.dataSource = self
@@ -42,13 +41,11 @@ extension TableViewCollectionViewCell: UITableViewDelegate {
 }
 
 extension TableViewCollectionViewCell: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsInfoFromVC.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "InformationCell", for: indexPath) as! InformationCell
         cell.titleLabel.text = newsInfoFromVC[indexPath.row].title
         if let okNewsLogoFromVC = newsLogoFromVC {

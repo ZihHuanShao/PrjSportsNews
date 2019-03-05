@@ -141,12 +141,9 @@ fileprivate enum Media: String {
 }
 
 class ViewController: UIViewController{
-    @IBOutlet weak var upCollectionView:    UICollectionView!
-    @IBOutlet weak var downCollectionView:  UICollectionView!
-
-//    @IBOutlet weak var bannerView: GADBannerView!
-    
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var upCollectionView     : UICollectionView!
+    @IBOutlet weak var downCollectionView   : UICollectionView!
+    @IBOutlet weak var bannerView           : GADBannerView!
     
     private var currenctIndexPath   : IndexPath!
     private var parseFailDict       : [String:Bool]?
@@ -194,6 +191,7 @@ class ViewController: UIViewController{
  
     @IBAction func leftBarButtonAction(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "軟體資訊", message: "", preferredStyle: .actionSheet)
+        
         let saveAction      = UIAlertAction(title: "最新消息", style: .default, handler:
         {
             (alert: UIAlertAction!) -> Void in
@@ -215,8 +213,6 @@ class ViewController: UIViewController{
         alertController.addAction(saveAction)
         alertController.addAction(deleteAction)
         self.present(alertController, animated: true)
-        
-        
     }
     
     // Refresh Button
@@ -233,7 +229,6 @@ class ViewController: UIViewController{
     
     private func bannerInit() {
         bannerView.adUnitID = "ca-app-pub-2373410982348314/3824171467" // AD ID
-        //        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // AD test ID
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
@@ -467,10 +462,10 @@ extension ViewController: TableCollectionViewCellDelegate {
 
 extension ViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("success")
+        print("dbg: bannerView success! @ViewController.swift")
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("fail")
+        print("dbg: bannerView fail! @ViewController.swift")
     }
 }

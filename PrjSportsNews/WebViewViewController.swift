@@ -30,7 +30,6 @@ class WebViewViewController: UIViewController {
     
     private func bannerInit() {
         bannerView.adUnitID = "ca-app-pub-2373410982348314/3824171467" // AD ID
-        //        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // AD test ID
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
@@ -54,10 +53,10 @@ extension WebViewViewController: WKNavigationDelegate {
 
 extension WebViewViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("success")
+        print("dbg: bannerView success! @WebViewViewController.swift")
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("fail")
+        print("dbg: bannerView fail! @WebViewViewController.swift")
     }
 }
