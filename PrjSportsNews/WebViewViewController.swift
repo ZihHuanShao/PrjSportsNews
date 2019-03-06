@@ -48,7 +48,9 @@ extension WebViewViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
     }
+    
 }
 
 extension WebViewViewController: GADBannerViewDelegate {
