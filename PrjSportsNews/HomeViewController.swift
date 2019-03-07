@@ -20,7 +20,8 @@ struct PublishersLogo {
 class HomeViewController: UIViewController {
     @IBOutlet weak var homeCollectionView   : UICollectionView!
     weak var delegate                       : HomeCollectionViewCellDelegate?
-    private var publishersLogoList          = [PublishersLogo(publisher: "教育部體育署", logo: "Sa_Icon-App-60x60"),
+    private var publishersLogoList          = [
+//                                               PublishersLogo(publisher: "教育部體育署", logo: "Sa_Icon-App-60x60"),
                                                PublishersLogo(publisher: "ETtoday"   , logo: "Ettoday_Icon-App-60x60"),
                                                PublishersLogo(publisher: "自由"       , logo: "Ltn_Icon-App-60x60"),
                                                PublishersLogo(publisher: "雅虎"       , logo: "Yahoo_Icon-App-60x60"),

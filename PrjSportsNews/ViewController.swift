@@ -22,7 +22,7 @@ struct PublishersInfo {
 }
 
 fileprivate enum Media: String {
-    case sa                 = "教育部體育署"
+//    case sa                 = "教育部體育署"
     case ettoday            = "ETtoday"
     case ltn                = "自由"
     case yahoo              = "雅虎"
@@ -58,78 +58,78 @@ fileprivate enum Media: String {
     case svOthersports      = "運動視界(其他運動)"
     
     static func getAllMedia() -> [Media] {
-        return [.sa, .ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnNBA, udnBasketball, udnJeremyLin, udnMLB, udnBaseball, udnRunnig, udnComprehensive, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
+        return [.ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnNBA, udnBasketball, udnJeremyLin, udnMLB, udnBaseball, udnRunnig, udnComprehensive, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
     }
     
     static func convertIndexToValue(_ index: Int) -> Media {
         switch index {
+//        case 0:
+//            return .sa
         case 0:
-            return .sa
-        case 1:
             return .ettoday
-        case 2:
+        case 1:
             return .ltn
-        case 3:
+        case 2:
             return .yahoo
-        case 4:
+        case 3:
             return .pchome
-        case 5:
+        case 4:
             return .cts
-        case 6:
+        case 5:
             return .chinatimes
-        case 7:
+        case 6:
             return .sina
-        case 8:
+        case 7:
             return .udnNBA
-        case 9:
+        case 8:
             return .udnBasketball
-        case 10:
+        case 9:
             return .udnJeremyLin
-        case 11:
+        case 10:
             return .udnMLB
-        case 12:
+        case 11:
             return .udnBaseball
-        case 13:
+        case 12:
             return .udnRunnig
-        case 14:
+        case 13:
             return .udnComprehensive
-        case 15:
+        case 14:
             return .svNBA
-        case 16:
+        case 15:
             return .svBasketball
-        case 17:
+        case 16:
             return .svMLB
-        case 18:
+        case 17:
             return .svCPBL
-        case 19:
+        case 18:
             return .svNPB
-        case 20:
+        case 19:
             return .svBaseball
-        case 21:
+        case 20:
             return .svTennis
-        case 22:
+        case 21:
             return .svVolleyball
-        case 23:
+        case 22:
             return .svFootball
-        case 24:
+        case 23:
             return .svBadminton
-        case 25:
+        case 24:
             return .svTabletennis
-        case 26:
+        case 25:
             return .svTrackandfield
-        case 27:
+        case 26:
             return .svSwimming
-        case 28:
+        case 27:
             return .svGolf
-        case 29:
+        case 28:
             return .svRunning
-        case 30:
+        case 29:
             return .svBike
-        case 31:
+        case 30:
             return .svTriathlon
-        case 32:
+        case 31:
             return .svXgames
-        case 33:
+        case 32:
             return .svOthersports
         default:
             fatalError()
@@ -149,7 +149,8 @@ class ViewController: UIViewController{
     private var session             = URLSession(configuration: .default)
     private var isDownloading       = false
     private var publishersInfo      =
-        [PublishersInfo(publisher: "教育部體育署"     , address: "https://www.sa.gov.tw/RssFeed",                          logo:"Sa_Icon-App-60x60"),
+        [
+//         PublishersInfo(publisher: "教育部體育署"     , address: "https://www.sa.gov.tw/RssFeed",                          logo:"Sa_Icon-App-60x60"),
          PublishersInfo(publisher: "ETtoday"        , address: "http://feeds.feedburner.com/ettoday/sport?format=xml",   logo:"Ettoday_Icon-App-60x60"),
          PublishersInfo(publisher: "自由"            , address: "https://news.ltn.com.tw/rss/sports.xml",                 logo:"Ltn_Icon-App-60x60"),
          PublishersInfo(publisher: "雅虎"            , address: "https://tw.news.yahoo.com/rss/sports",                   logo:"Yahoo_Icon-App-60x60"),
@@ -270,8 +271,8 @@ class ViewController: UIViewController{
                     if parser.parse() == true {
                         
                         switch self.medias[publisherIndex] {
-                        case .sa:
-                            self.allObjectDict[.sa]                 = rssParserDelegate.getResult()
+//                        case .sa:
+//                            self.allObjectDict[.sa]                 = rssParserDelegate.getResult()
                         case .ettoday:
                             self.allObjectDict[.ettoday]            = rssParserDelegate.getResult()
                         case .ltn:
@@ -422,7 +423,7 @@ extension ViewController: UICollectionViewDataSource {
         case self.upCollectionView:
             return publishersInfo.count
         case self.downCollectionView:
-            return allObjectDict[Media.sa] == nil ? 0 : publishersInfo.count
+            return allObjectDict[Media.ettoday] == nil ? 0 : publishersInfo.count
         default:
             fatalError()
         }

@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="624.79999999999995" y="15.742128935532236"/>
+            <point key="canvasLocation" x="329" y="17"/>
         </scene>
         <!--About Me View Controller-->
         <scene sceneID="VCN-bd-44W">
@@ -144,7 +144,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zf-pZ-1b5">
-                                <rect key="frame" x="5" y="70" width="365" height="399.5"/>
+                                <rect key="frame" x="5" y="70" width="365" height="380.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="本資料來源詳細見如下">
                                         <attributes>
@@ -155,22 +155,6 @@
                                     </fragment>
                                     <fragment>
                                         <string key="content">:
-  - </string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="12" name=".SFNSText"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="教育部體育署">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="12" name=".PingFangTC-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">: https://www.sa.gov.tw/
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -409,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0S-pP-zUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448.8" y="600.44977511244383"/>
+            <point key="canvasLocation" x="1647" y="16"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y4A-hi-Fck">
@@ -518,11 +502,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFa-9J-U5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448.8" y="-120.08995502248877"/>
+            <point key="canvasLocation" x="986" y="17"/>
         </scene>
     </scenes>
     <resources>
         <image name="About_Icon-App-60x60" width="60" height="60"/>
-        <image name="copyRight" width="698" height="76"/>
+        <image name="copyRight" width="751" height="90"/>
     </resources>
 </document>
