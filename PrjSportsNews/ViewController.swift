@@ -30,16 +30,18 @@ fileprivate enum Media: String {
     case cts                = "華視"
     case chinatimes         = "中時"
     case sina               = "新浪"
+    
     case udnHBLDome         = "UDN(HBL決戰小巨蛋)"
     case udnNBA             = "UDN(NBA)"
-    case udnBasketball      = "UDN(籃球)"
-    case udnJHBL            = "UDN(JHBL)"
     case udnJeremyLin       = "UDN(林書豪專區)"
-    case udnMLB             = "UDN(MLB)"
     case udnBaseball        = "UDN(棒球)"
     case udnBaseball30Years = "UDN(中職30年)"
-    case udnRunnig          = "UDN(路跑)"
+    case udnMLB             = "UDN(MLB)"
+    case udnBasketball      = "UDN(籃球)"
+    case udnJHBL            = "UDN(JHBL)"
     case udnComprehensive   = "UDN(綜合)"
+    case udnRunnig          = "UDN(路跑)"
+    
     case svNBA              = "運動視界(NBA)"
     case svBasketball       = "運動視界(籃球)"
     case svMLB              = "運動視界(MLB)"
@@ -61,7 +63,7 @@ fileprivate enum Media: String {
     case svOthersports      = "運動視界(其他運動)"
     
     static func getAllMedia() -> [Media] {
-        return [.ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnHBLDome, udnNBA, udnBasketball, udnJHBL, udnJeremyLin, udnMLB, udnBaseball, udnBaseball30Years,udnRunnig, udnComprehensive, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
+        return [.ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnHBLDome, udnNBA, udnJeremyLin, udnBaseball, udnBaseball30Years, udnMLB, udnBasketball, udnJHBL,udnComprehensive, udnRunnig, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
     }
     
     // convert to enum
@@ -88,21 +90,21 @@ fileprivate enum Media: String {
         case 8:
             return .udnNBA
         case 9:
-            return .udnBasketball
+            return .udnJeremyLin
         case 10:
-            return .udnJHBL
+            return .udnBaseball
         case 11:
             return .udnBaseball30Years
         case 12:
-            return .udnJeremyLin
-        case 13:
             return .udnMLB
+        case 13:
+            return .udnBasketball
         case 14:
-            return .udnBaseball
+            return .udnJHBL
         case 15:
-            return .udnRunnig
-        case 16:
             return .udnComprehensive
+        case 16:
+            return .udnRunnig
         case 17:
             return .svNBA
         case 18:
@@ -170,14 +172,14 @@ class ViewController: UIViewController{
          PublishersInfo(publisher: "新浪"            , address: "https://news.sina.com.tw/rss/sports/tw.xml",             logo:"Sina_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(HBL決戰小巨蛋)", address: "https://udn.com/rssfeed/news/2/7227/8688?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(NBA)"       , address: "https://udn.com/rssfeed/news/2/7227/7002?ch=news",       logo:"Udn_Icon-App-60x60"),
-         PublishersInfo(publisher: "UDN(籃球)"       , address: "https://udn.com/rssfeed/news/2/7227/7003?ch=news",       logo:"Udn_Icon-App-60x60"),
-         PublishersInfo(publisher: "UDN(JHBL)"      , address: "https://udn.com/rssfeed/news/2/7227/12863?ch=news",     logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(林書豪專區)"  , address: "https://udn.com/rssfeed/news/2/7227/7489?ch=news",       logo:"Udn_Icon-App-60x60"),
-         PublishersInfo(publisher: "UDN(MLB)"       , address: "https://udn.com/rssfeed/news/2/7227/6999?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(棒球)"       , address: "https://udn.com/rssfeed/news/2/7227/7001?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(中職30年)"   , address: "https://udn.com/rssfeed/news/2/7227/12822?ch=news",       logo:"Udn_Icon-App-60x60"),
-         PublishersInfo(publisher: "UDN(路跑)"       , address: "https://udn.com/rssfeed/news/2/7227/7879?ch=news",       logo:"Udn_Icon-App-60x60"),
+         PublishersInfo(publisher: "UDN(MLB)"       , address: "https://udn.com/rssfeed/news/2/7227/6999?ch=news",       logo:"Udn_Icon-App-60x60"),
+         PublishersInfo(publisher: "UDN(籃球)"       , address: "https://udn.com/rssfeed/news/2/7227/7003?ch=news",       logo:"Udn_Icon-App-60x60"),
+         PublishersInfo(publisher: "UDN(JHBL)"      , address: "https://udn.com/rssfeed/news/2/7227/12863?ch=news",     logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "UDN(綜合)"       , address: "https://udn.com/rssfeed/news/2/7227/7005?ch=news",       logo:"Udn_Icon-App-60x60"),
+         PublishersInfo(publisher: "UDN(路跑)"       , address: "https://udn.com/rssfeed/news/2/7227/7879?ch=news",       logo:"Udn_Icon-App-60x60"),
          PublishersInfo(publisher: "運動視界(NBA)"    , address: "https://www.sportsv.net/nba/feed",                       logo:"SportsVision_Icon-App-60x60"),
          PublishersInfo(publisher: "運動視界(籃球)"    , address: "https://www.sportsv.net/basketball/feed",                logo:"SportsVision_Icon-App-60x60"),
          PublishersInfo(publisher: "運動視界(MLB)"    , address: "https://www.sportsv.net/mlb/feed",                       logo:"SportsVision_Icon-App-60x60"),
@@ -304,22 +306,22 @@ class ViewController: UIViewController{
                             self.allObjectDict[.udnHBLDome]         = rssParserDelegate.getResult()
                         case .udnNBA:
                             self.allObjectDict[.udnNBA]             = rssParserDelegate.getResult()
-                        case .udnBasketball:
-                            self.allObjectDict[.udnBasketball]      = rssParserDelegate.getResult()
-                        case .udnJHBL:
-                            self.allObjectDict[.udnJHBL]            = rssParserDelegate.getResult()
                         case .udnJeremyLin:
                             self.allObjectDict[.udnJeremyLin]       = rssParserDelegate.getResult()
-                        case .udnMLB:
-                            self.allObjectDict[.udnMLB]             = rssParserDelegate.getResult()
                         case .udnBaseball:
                             self.allObjectDict[.udnBaseball]        = rssParserDelegate.getResult()
                         case .udnBaseball30Years:
                             self.allObjectDict[.udnBaseball30Years] = rssParserDelegate.getResult()
-                        case .udnRunnig:
-                            self.allObjectDict[.udnRunnig]          = rssParserDelegate.getResult()
+                        case .udnMLB:
+                            self.allObjectDict[.udnMLB]             = rssParserDelegate.getResult()
+                        case .udnBasketball:
+                            self.allObjectDict[.udnBasketball]      = rssParserDelegate.getResult()
+                        case .udnJHBL:
+                            self.allObjectDict[.udnJHBL]            = rssParserDelegate.getResult()
                         case .udnComprehensive:
                             self.allObjectDict[.udnComprehensive]   = rssParserDelegate.getResult()
+                        case .udnRunnig:
+                            self.allObjectDict[.udnRunnig]          = rssParserDelegate.getResult()
                         case .svNBA:
                             self.allObjectDict[.svNBA]              = rssParserDelegate.getResult()
                         case .svBasketball:
