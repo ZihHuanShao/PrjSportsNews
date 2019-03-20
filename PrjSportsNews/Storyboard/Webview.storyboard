@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEl-Gp-Ckb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -29,14 +29,6 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hag-AG-VBn">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kH-bh-76I" customClass="GADBannerView">
-                                <rect key="frame" x="27.5" y="617" width="320" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JfN-PG-1zz"/>
-                                    <constraint firstAttribute="width" constant="320" id="zRC-uH-xZI"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -45,14 +37,11 @@
                             <constraint firstItem="zEl-Gp-Ckb" firstAttribute="leading" secondItem="Hg1-DZ-nU8" secondAttribute="leading" id="OdX-c4-bsX"/>
                             <constraint firstItem="zEl-Gp-Ckb" firstAttribute="trailing" secondItem="Hg1-DZ-nU8" secondAttribute="trailing" id="Y1S-Ft-bot"/>
                             <constraint firstItem="Hag-AG-VBn" firstAttribute="centerY" secondItem="Do6-Y9-mQW" secondAttribute="centerY" id="aCc-4d-zcD"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="4kH-bh-76I" secondAttribute="bottom" id="cTD-uQ-kGf"/>
-                            <constraint firstItem="4kH-bh-76I" firstAttribute="centerX" secondItem="Do6-Y9-mQW" secondAttribute="centerX" id="gsH-88-Jdw"/>
-                            <constraint firstItem="4kH-bh-76I" firstAttribute="top" secondItem="zEl-Gp-Ckb" secondAttribute="bottom" id="ric-va-wUH"/>
+                            <constraint firstAttribute="bottom" secondItem="zEl-Gp-Ckb" secondAttribute="bottom" id="sOu-ch-tjj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hg1-DZ-nU8"/>
                     </view>
                     <connections>
-                        <outlet property="bannerView" destination="4kH-bh-76I" id="StR-kW-9hK"/>
                         <outlet property="myActivityIndicator" destination="Hag-AG-VBn" id="dtZ-BB-dYp"/>
                         <outlet property="myWebView" destination="zEl-Gp-Ckb" id="bGR-ok-3bK"/>
                     </connections>

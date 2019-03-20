@@ -59,7 +59,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-XM-Ho3">
-                                <rect key="frame" x="0.0" y="50" width="375" height="503"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rjN-XJ-x11">
                                     <size key="itemSize" width="375" height="554"/>
@@ -69,22 +69,12 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHm-Xk-BMc" customClass="GADBannerView">
-                                <rect key="frame" x="27.5" y="553" width="320" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="7Qq-Y0-kVF"/>
-                                    <constraint firstAttribute="height" constant="50" id="aZ8-nK-2Ld"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IHm-Xk-BMc" secondAttribute="bottom" id="B7O-Z5-HDZ"/>
                             <constraint firstItem="Ooe-Mj-BCD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GIs-hp-fF7"/>
+                            <constraint firstAttribute="bottom" secondItem="kSA-XM-Ho3" secondAttribute="bottom" id="HtT-PZ-F2Y"/>
                             <constraint firstAttribute="trailing" secondItem="kSA-XM-Ho3" secondAttribute="trailing" id="bLn-Ib-u9u"/>
-                            <constraint firstItem="IHm-Xk-BMc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l4f-rc-Vgm"/>
-                            <constraint firstItem="IHm-Xk-BMc" firstAttribute="top" secondItem="kSA-XM-Ho3" secondAttribute="bottom" id="m4p-hL-M9W"/>
                             <constraint firstItem="kSA-XM-Ho3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nqb-y5-fEr"/>
                             <constraint firstItem="kSA-XM-Ho3" firstAttribute="top" secondItem="Ooe-Mj-BCD" secondAttribute="bottom" id="rIe-7w-Qay"/>
                             <constraint firstItem="Ooe-Mj-BCD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rgD-p8-5Hp"/>
@@ -109,7 +99,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bannerView" destination="IHm-Xk-BMc" id="mdb-7m-a6v"/>
                         <outlet property="downCollectionView" destination="kSA-XM-Ho3" id="yuq-e6-WgZ"/>
                         <outlet property="upCollectionView" destination="Ooe-Mj-BCD" id="SAh-sn-NO5"/>
                     </connections>

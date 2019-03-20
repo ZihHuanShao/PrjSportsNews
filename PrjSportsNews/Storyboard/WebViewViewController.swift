@@ -12,27 +12,17 @@ import GoogleMobileAds
 
 class WebViewViewController: UIViewController {
     
-    @IBOutlet weak var bannerView           : GADBannerView!
     @IBOutlet weak var myWebView            : WKWebView!
     @IBOutlet weak var myActivityIndicator  : UIActivityIndicatorView!
     var linkFromVC                          : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bannerInit()
         myWebView.navigationDelegate = self
-        
         if let okLink = linkFromVC, let okUrl = URL(string: okLink) {
             let request = URLRequest(url: okUrl)
             myWebView.load(request)
         }
-    }
-    
-    private func bannerInit() {
-        bannerView.adUnitID = "ca-app-pub-2373410982348314/3824171467" // AD ID
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        bannerView.delegate = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -51,14 +41,4 @@ extension WebViewViewController: WKNavigationDelegate {
         myActivityIndicator.isHidden = true
     }
     
-}
-
-extension WebViewViewController: GADBannerViewDelegate {
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("dbg: bannerView success! @WebViewViewController.swift")
-    }
-    
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("dbg: bannerView fail! @WebViewViewController.swift")
-    }
 }

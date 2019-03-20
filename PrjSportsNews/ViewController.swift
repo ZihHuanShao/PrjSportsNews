@@ -149,7 +149,6 @@ fileprivate enum Media: String {
 class ViewController: UIViewController {
     @IBOutlet weak var upCollectionView     : UICollectionView!
     @IBOutlet weak var downCollectionView   : UICollectionView!
-    @IBOutlet weak var bannerView           : GADBannerView!
     
     private var currenctIndexPath   : IndexPath!
     private var parseFailDict       : [String:Bool]?
@@ -225,16 +224,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bannerInit()
         updateDataSource()
         updateUI()
-    }
-    
-    private func bannerInit() {
-        bannerView.adUnitID = "ca-app-pub-2373410982348314/3824171467" // AD ID
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        bannerView.delegate = self
     }
     
     private func updateDataSource() {
@@ -465,15 +456,5 @@ extension ViewController: TableCollectionViewCellDelegate {
         webviewViewController.linkFromVC = link
         webviewViewController.title      = publishersInfo[currenctIndexPath.row].publisher
         self.navigationController?.pushViewController(webviewViewController, animated: true)
-    }
-}
-
-extension ViewController: GADBannerViewDelegate {
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("dbg: bannerView success! @ViewController.swift")
-    }
-    
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("dbg: bannerView fail! @ViewController.swift")
     }
 }
