@@ -82,6 +82,7 @@
 		E967E0562218055B002C62CE /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				E967E054221803E0002C62CE /* WebViewViewController.swift */,
 				E967E0572218056F002C62CE /* Webview.storyboard */,
 			);
 			path = Storyboard;
@@ -117,7 +118,6 @@
 				E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */,
 				E91CDD0B2216A7F4003A7823 /* RssParserDelegate.swift */,
 				E96CAC9B221512B800E83DBF /* LabelCollectionViewCell.swift */,
-				E967E054221803E0002C62CE /* WebViewViewController.swift */,
 				E96CAC8B22150E5200E83DBF /* Main.storyboard */,
 				E96CAC8E22150E5300E83DBF /* Assets.xcassets */,
 				E96CAC9022150E5300E83DBF /* LaunchScreen.storyboard */,

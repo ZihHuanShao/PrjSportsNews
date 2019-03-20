@@ -22,7 +22,6 @@ struct PublishersInfo {
 }
 
 fileprivate enum Media: String {
-//    case sa                 = "教育部體育署"
     case ettoday            = "ETtoday"
     case ltn                = "自由"
     case yahoo              = "雅虎"
@@ -69,8 +68,6 @@ fileprivate enum Media: String {
     // convert to enum
     static func convertIndexToValue(_ index: Int) -> Media {
         switch index {
-//        case 0:
-//            return .sa
         case 0:
             return .ettoday
         case 1:
@@ -149,7 +146,7 @@ fileprivate enum Media: String {
     }
 }
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
     @IBOutlet weak var upCollectionView     : UICollectionView!
     @IBOutlet weak var downCollectionView   : UICollectionView!
     @IBOutlet weak var bannerView           : GADBannerView!
@@ -162,7 +159,6 @@ class ViewController: UIViewController{
     private var isDownloading       = false
     private var publishersInfo      =
         [
-//         PublishersInfo(publisher: "教育部體育署"     , address: "https://www.sa.gov.tw/RssFeed",                          logo:"Sa_Icon-App-60x60"),
          PublishersInfo(publisher: "ETtoday"        , address: "http://feeds.feedburner.com/ettoday/sport?format=xml",   logo:"Ettoday_Icon-App-60x60"),
          PublishersInfo(publisher: "自由"            , address: "https://news.ltn.com.tw/rss/sports.xml",                 logo:"Ltn_Icon-App-60x60"),
          PublishersInfo(publisher: "雅虎"            , address: "https://tw.news.yahoo.com/rss/sports",                   logo:"Yahoo_Icon-App-60x60"),
@@ -204,7 +200,7 @@ class ViewController: UIViewController{
     @IBAction func leftBarButtonAction(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "軟體資訊", message: "", preferredStyle: .actionSheet)
         
-        let saveAction      = UIAlertAction(title: "最新消息", style: .default, handler:
+        let firstAction = UIAlertAction(title: "最新消息", style: .default, handler:
         {
             (alert: UIAlertAction!) -> Void in
             let storyboard              = UIStoryboard(name: "Main", bundle: nil)
@@ -213,7 +209,7 @@ class ViewController: UIViewController{
             self.navigationController?.pushViewController(aboutMeViewController, animated: true)
         })
         
-        let deleteAction = UIAlertAction(title: "關於App", style: .default, handler:
+        let secondAction = UIAlertAction(title: "關於App", style: .default, handler:
         {
             (alert: UIAlertAction!) -> Void in
             let storyboard              = UIStoryboard(name: "Main", bundle: nil)
@@ -222,21 +218,16 @@ class ViewController: UIViewController{
             self.navigationController?.pushViewController(aboutMeViewController, animated: true)
         })
         
-        alertController.addAction(saveAction)
-        alertController.addAction(deleteAction)
-        self.present(alertController, animated: true)
+        alertController.addAction(firstAction)
+        alertController.addAction(secondAction)
+        present(alertController, animated: true)
     }
-    
-    // Refresh Button
-    @IBAction func rightBarButtonAction(_ sender: UIBarButtonItem) {
-        updateDataSource()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bannerInit()
-        self.updateDataSource()
-        self.updateUI()
+        bannerInit()
+        updateDataSource()
+        updateUI()
     }
     
     private func bannerInit() {
@@ -260,10 +251,12 @@ class ViewController: UIViewController{
         downCollectionView.delegate     = self
         downCollectionView.dataSource   = self
         
-        self.currenctIndexPath = IndexPath(row: 0, section: 0)
-        
-        let collectionViewCellNib = UINib(nibName: "TableViewCollectionViewCell", bundle: nil)
-        self.downCollectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: "TableViewCollectionViewCell")
+        currenctIndexPath = IndexPath(row: 0, section: 0)
+        downCollectionView.register(UINib(nibName: "TableViewCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TableViewCollectionViewCell")
+    }
+    
+    @IBAction func rightBarButtonAction(_ sender: UIBarButtonItem) {
+        updateDataSource()
     }
     
     func downloadXML(_ xmlAddress: String, _ publisherIndex: Int) {
@@ -286,8 +279,6 @@ class ViewController: UIViewController{
                     if parser.parse() == true {
                         
                         switch self.medias[publisherIndex] {
-//                        case .sa:
-//                            self.allObjectDict[.sa]                 = rssParserDelegate.getResult()
                         case .ettoday:
                             self.allObjectDict[.ettoday]            = rssParserDelegate.getResult()
                         case .ltn:
@@ -368,7 +359,7 @@ class ViewController: UIViewController{
                     } else {
                         print("dbg: parse fail! @\(self.medias[publisherIndex])")
                         self.parseFailDict = [String:Bool]()
-                        self.parseFailDict![self.publishersInfo[publisherIndex].publisher] = true
+                        self.parseFailDict![self.publishersInfo[publisherIndex].publisher] = true   // save the publisher name into dictionary if parse fail
                         self.isDownloading = false
                     }
                 } else {
@@ -394,19 +385,19 @@ extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.title = publishersInfo[indexPath.row].publisher // change navigation bar title
         switch collectionView {
-        case self.upCollectionView:
-            if let okParseFailDictValue = parseFailDict?[self.publishersInfo[indexPath.row].publisher] {
+        case upCollectionView:
+            if let okParseFailDictValue = parseFailDict?[publishersInfo[indexPath.row].publisher] {
                 if okParseFailDictValue == true {
                     popAlert(withTitle: "糟糕:『\(publishersInfo[indexPath.row].publisher)』網頁資源發生問題!")
                 }
             } else {
-                self.currenctIndexPath = indexPath
-                self.upCollectionView.scrollToItem(at: self.currenctIndexPath, at: .centeredHorizontally, animated: true)
-                self.downCollectionView.scrollToItem(at: self.currenctIndexPath, at: .centeredHorizontally, animated: true)
-                self.upCollectionView.reloadData()
+                currenctIndexPath = indexPath
+                upCollectionView.scrollToItem(at: currenctIndexPath, at: .centeredHorizontally, animated: true)
+                downCollectionView.scrollToItem(at: currenctIndexPath, at: .centeredHorizontally, animated: true)
+                upCollectionView.reloadData()
                 break
             }
-        case self.downCollectionView:
+        case downCollectionView:
             break
         default:
             fatalError()
@@ -415,19 +406,19 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
-        case self.upCollectionView:
+        case upCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellA", for: indexPath) as! LabelCollectionViewCell
             cell.myLabel.text           = publishersInfo[indexPath.row].publisher
             cell.myLabel.numberOfLines  = 2
             return cell
             
-        case self.downCollectionView:
+        case downCollectionView:
             let cell            = collectionView.dequeueReusableCell(withReuseIdentifier: "TableViewCollectionViewCell", for: indexPath) as! TableViewCollectionViewCell
             let currentMedia    = Media.convertIndexToValue(indexPath.row)
-            if let okAllObjectDictValue = self.allObjectDict[currentMedia] {
+            if let okAllObjectDictValue = allObjectDict[currentMedia] {
                 cell.newsInfoFromVC = okAllObjectDictValue
             }
-            cell.newsLogoFromVC = self.publishersInfo[indexPath.row].logo
+            cell.newsLogoFromVC = publishersInfo[indexPath.row].logo
             cell.delegate       = self
             cell.updateUI()
             return cell
@@ -441,9 +432,9 @@ extension ViewController: UICollectionViewDelegate {
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
-        case self.upCollectionView:
+        case upCollectionView:
             return publishersInfo.count
-        case self.downCollectionView:
+        case downCollectionView:
             return allObjectDict[Media.ettoday] == nil ? 0 : publishersInfo.count
         default:
             fatalError()
@@ -454,11 +445,11 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
-        case self.upCollectionView:
+        case upCollectionView:
             return CGSize(width: 100, height: 50)
             
-        case self.downCollectionView:
-            return CGSize(width: self.downCollectionView.frame.width , height: self.downCollectionView.frame.height)
+        case downCollectionView:
+            return CGSize(width: downCollectionView.frame.width , height: downCollectionView.frame.height)
             
         default:
             fatalError()
@@ -469,8 +460,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 // Implement Protocol: didTapCell
 extension ViewController: TableCollectionViewCellDelegate {
     func didTapCell(_ link: String) {
-        let storyboard = UIStoryboard(name: "Webview", bundle: nil)
-        let webviewViewController = storyboard.instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
+        let storyboard                   = UIStoryboard(name: "Webview", bundle: nil)
+        let webviewViewController        = storyboard.instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
         webviewViewController.linkFromVC = link
         webviewViewController.title      = publishersInfo[currenctIndexPath.row].publisher
         self.navigationController?.pushViewController(webviewViewController, animated: true)
