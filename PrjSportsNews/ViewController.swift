@@ -62,7 +62,7 @@ fileprivate enum Media: String {
     case svOthersports      = "運動視界(其他運動)"
     
     static func getAllMedia() -> [Media] {
-        return [.ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, udnHBLDome, udnNBA, udnJeremyLin, udnBaseball, udnBaseball30Years, udnMLB, udnBasketball, udnJHBL,udnComprehensive, udnRunnig, .svNBA, svBasketball, svMLB, svCPBL, svNPB, svBaseball, svTennis, svVolleyball, svFootball, svBadminton, svTabletennis, svTrackandfield, svSwimming, svGolf, svRunning, svBike, svTriathlon, svXgames, svOthersports]
+        return [.ettoday, .ltn, .yahoo, .pchome, .cts, .chinatimes, .sina, .udnHBLDome, .udnNBA, .udnJeremyLin, .udnBaseball, .udnBaseball30Years, .udnMLB, .udnBasketball, .udnJHBL, .udnComprehensive, .udnRunnig, .svNBA, .svBasketball, .svMLB, .svCPBL, .svNPB, .svBaseball, .svTennis, .svVolleyball, .svFootball, .svBadminton, .svTabletennis, .svTrackandfield, .svSwimming, .svGolf, .svRunning, .svBike, .svTriathlon, .svXgames, .svOthersports]
     }
     
     // convert to enum
@@ -116,29 +116,29 @@ fileprivate enum Media: String {
             return .svBaseball
         case 23:
             return .svTennis
-        case 24:
+        case 23:
             return .svVolleyball
-        case 25:
+        case 24:
             return .svFootball
-        case 26:
+        case 25:
             return .svBadminton
-        case 27:
+        case 26:
             return .svTabletennis
-        case 28:
+        case 27:
             return .svTrackandfield
-        case 29:
+        case 28:
             return .svSwimming
-        case 30:
+        case 29:
             return .svGolf
-        case 31:
+        case 30:
             return .svRunning
-        case 32:
+        case 31:
             return .svBike
-        case 33:
+        case 32:
             return .svTriathlon
-        case 34:
+        case 33:
             return .svXgames
-        case 35:
+        case 34:
             return .svOthersports
         default:
             fatalError()
@@ -151,7 +151,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var downCollectionView   : UICollectionView!
     
     private var currenctIndexPath   : IndexPath!
-    private var parseFailDict       : [String:Bool]?
+    private var parseFailDict       = [String:Bool]()
     private var medias              = Media.getAllMedia()
     private var allObjectDict       = [Media: [NewsItem]]()
     private var session             = URLSession(configuration: .default)
@@ -348,10 +348,22 @@ class ViewController: UIViewController {
                         }
                         self.isDownloading = false
                     } else {
+
                         print("dbg: parse fail! @\(self.medias[publisherIndex])")
-                        self.parseFailDict = [String:Bool]()
-                        self.parseFailDict![self.publishersInfo[publisherIndex].publisher] = true   // save the publisher name into dictionary if parse fail
+                        self.parseFailDict[self.publishersInfo[publisherIndex].publisher] = true   // save the publisher name into dictionary if parse fail
                         self.isDownloading = false
+                        if self.currenctIndexPath.row == 0 && self.currenctIndexPath.section == 0 {
+                            if let okParseFailDictValue = self.parseFailDict["ETtoday"] {
+                                if okParseFailDictValue == true {
+                                    self.popAlert(withTitle: "糟糕:『\(self.publishersInfo[self.currenctIndexPath.row].publisher)』網頁資源發生問題!")
+                                }
+
+                                self.currenctIndexPath.row += 1
+                                self.upCollectionView.scrollToItem(at: self.currenctIndexPath, at: .centeredHorizontally, animated: true)
+                                self.downCollectionView.scrollToItem(at: self.currenctIndexPath, at: .centeredHorizontally, animated: true)
+                                self.upCollectionView.reloadData()
+                            }
+                        }
                     }
                 } else {
                     self.isDownloading = false
@@ -377,10 +389,8 @@ extension ViewController: UICollectionViewDelegate {
         self.title = publishersInfo[indexPath.row].publisher // change navigation bar title
         switch collectionView {
         case upCollectionView:
-            if let okParseFailDictValue = parseFailDict?[publishersInfo[indexPath.row].publisher] {
-                if okParseFailDictValue == true {
+            if parseFailDict[publishersInfo[indexPath.row].publisher] == true {
                     popAlert(withTitle: "糟糕:『\(publishersInfo[indexPath.row].publisher)』網頁資源發生問題!")
-                }
             } else {
                 currenctIndexPath = indexPath
                 upCollectionView.scrollToItem(at: currenctIndexPath, at: .centeredHorizontally, animated: true)
@@ -426,7 +436,8 @@ extension ViewController: UICollectionViewDataSource {
         case upCollectionView:
             return publishersInfo.count
         case downCollectionView:
-            return allObjectDict[Media.ettoday] == nil ? 0 : publishersInfo.count
+//            return allObjectDict[Media.ettoday] == nil ? 0 : publishersInfo.count
+            return publishersInfo.count
         default:
             fatalError()
         }
