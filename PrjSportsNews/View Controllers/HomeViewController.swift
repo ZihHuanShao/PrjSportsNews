@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
                                                PublishersLogo(publisher: "ETtoday"   , logo: "Ettoday_Icon-App-60x60"),
                                                PublishersLogo(publisher: "自由"       , logo: "Ltn_Icon-App-60x60"),
                                                PublishersLogo(publisher: "雅虎"       , logo: "Yahoo_Icon-App-60x60"),
-                                               PublishersLogo(publisher: "PCHOME"    , logo: "PChome_Icon-App-60x60"),
+//                                               PublishersLogo(publisher: "PCHOME"    , logo: "PChome_Icon-App-60x60"),
                                                PublishersLogo(publisher: "華視"       , logo: "Cts_Icon-App-60x60"),
                                                PublishersLogo(publisher: "中時"       , logo: "Ct_Icon-App-60x60"),
                                                PublishersLogo(publisher: "新浪"       , logo: "Sina_Icon-App-60x60"),

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeb-Rr-nrt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeb-Rr-nrt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ooe-Mj-BCD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.84735500809999997" green="0.95264548059999998" blue="0.97251993420000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ygn-zm-4v9"/>
                                 </constraints>
@@ -83,16 +83,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="體育運動消息" id="jhy-Yd-dx4">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="bYN-8v-dh5"/>
+                        <barButtonItem key="backBarButtonItem" title="返回" id="bYN-8v-dh5">
+                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="leftBarButtonItem" image="About_Icon-App-60x60" id="1S3-qL-eex">
                             <inset key="imageInsets" minX="-14" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <color key="tintColor" red="0.10052736650000001" green="0.34644536539999998" blue="0.91409090749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="leftBarButtonAction:" destination="BYZ-38-t0r" id="mt7-dq-XM7"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="HJF-kv-wxo">
-                            <color key="tintColor" red="0.10052736650000001" green="0.34644536539999998" blue="0.91409090749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="rightBarButtonAction:" destination="BYZ-38-t0r" id="uua-q7-LKO"/>
                             </connections>
@@ -133,7 +135,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zf-pZ-1b5">
-                                <rect key="frame" x="5" y="70" width="365" height="380.5"/>
+                                <rect key="frame" x="10" y="80" width="355" height="446"/>
                                 <attributedString key="attributedText">
                                     <fragment content="本資料來源詳細見如下">
                                         <attributes>
@@ -193,21 +195,7 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=": https://tw.news.yahoo.com/   - PChome ">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="12" name=".SFNSText"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="新聞">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="12" name=".PingFangTC-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=": http://news.pchome.com.tw/   - ">
+                                    <fragment content=": https://tw.news.yahoo.com/   - ">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name=".SFNSText"/>
@@ -298,7 +286,22 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="若您發現問題或任何版權疑慮">
+                                    <fragment content="以上媒體所提供的免費資源">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",  ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="僅限於非營利及非商業行為之操作使用">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name="PingFangTC-Regular"/>
@@ -310,6 +313,57 @@
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="作者以單純分享給對體育及運動愛好者之理念">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="用於完全免收費之服務">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".  ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="若有發現問題或任何版權疑慮">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="作者將深感抱歉並會及時予以改正, 並">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="PingFangTC-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -321,14 +375,14 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" (fd.shao@gmail.com)">
+                                    <fragment content=" (appsays.s@gmail.com)">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="通知我">
+                                    <fragment content="通知">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name="PingFangTC-Regular"/>
@@ -343,7 +397,7 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" lineSpacing="5" minimumLineHeight="10" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="本人將萬分感激並會及時予以改正">
+                                    <fragment content="謝謝">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name="PingFangTC-Regular"/>
@@ -367,12 +421,12 @@
                             <constraint firstItem="u4p-WW-Zkk" firstAttribute="leading" secondItem="wSv-KN-bBG" secondAttribute="leading" id="3Jc-Fj-xCF"/>
                             <constraint firstItem="j67-gt-YaN" firstAttribute="top" secondItem="iZv-a3-SKW" secondAttribute="top" constant="20" id="6lu-lf-Eef"/>
                             <constraint firstItem="u4p-WW-Zkk" firstAttribute="bottom" secondItem="wSv-KN-bBG" secondAttribute="bottom" id="BQr-N7-JbH"/>
-                            <constraint firstItem="5Zf-pZ-1b5" firstAttribute="top" secondItem="j67-gt-YaN" secondAttribute="bottom" id="Blc-gg-glN"/>
-                            <constraint firstItem="5Zf-pZ-1b5" firstAttribute="leading" secondItem="iZv-a3-SKW" secondAttribute="leading" constant="5" id="T5O-Q8-HUA"/>
+                            <constraint firstItem="5Zf-pZ-1b5" firstAttribute="leading" secondItem="iZv-a3-SKW" secondAttribute="leading" constant="10" id="T5O-Q8-HUA"/>
                             <constraint firstItem="u4p-WW-Zkk" firstAttribute="trailing" secondItem="wSv-KN-bBG" secondAttribute="trailing" id="WVW-WR-ZdJ"/>
                             <constraint firstItem="j67-gt-YaN" firstAttribute="leading" secondItem="iZv-a3-SKW" secondAttribute="leading" id="enC-JN-pzk"/>
+                            <constraint firstItem="5Zf-pZ-1b5" firstAttribute="top" secondItem="j67-gt-YaN" secondAttribute="bottom" constant="10" id="lwn-wr-ouL"/>
                             <constraint firstItem="j67-gt-YaN" firstAttribute="trailing" secondItem="iZv-a3-SKW" secondAttribute="trailing" id="r8A-A9-1Du"/>
-                            <constraint firstItem="iZv-a3-SKW" firstAttribute="trailing" secondItem="5Zf-pZ-1b5" secondAttribute="trailing" constant="5" id="w1Z-iF-MyW"/>
+                            <constraint firstItem="iZv-a3-SKW" firstAttribute="trailing" secondItem="5Zf-pZ-1b5" secondAttribute="trailing" constant="10" id="w1Z-iF-MyW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iZv-a3-SKW"/>
                     </view>
@@ -394,7 +448,7 @@
                         <color key="barTintColor" red="0.98750209710000003" green="1" blue="0.76712314000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                            <color key="textColor" red="0.10052736650000001" green="0.34644536539999998" blue="0.91409090749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="textShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -415,7 +469,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Bc-86-0Ur">
-                                <rect key="frame" x="0.0" y="155" width="375" height="512"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L18-Qy-Ymg">
                                     <size key="itemSize" width="375" height="516"/>
@@ -458,26 +512,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6b-jy-pat">
-                                <rect key="frame" x="10" y="49.5" width="355" height="55.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="針對國內各家線上媒體, 匯集大部分以國內為主, 最新的體育運動相關消息">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="PingFangTC-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="針對國內各家線上媒體, 匯集大部分以國內為主, 最新的體育運動相關消息" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6b-jy-pat">
+                                <rect key="frame" x="10" y="30" width="355" height="50.5"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="18"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.84735500809999997" green="0.95264548059999998" blue="0.97251993420000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="1Bc-86-0Ur" firstAttribute="top" secondItem="N6b-jy-pat" secondAttribute="bottom" constant="50" id="6P1-hF-NfV"/>
+                            <constraint firstItem="N6b-jy-pat" firstAttribute="top" secondItem="TwW-y0-Dh8" secondAttribute="top" constant="10" id="21V-Gg-gLD"/>
                             <constraint firstItem="N6b-jy-pat" firstAttribute="leading" secondItem="TwW-y0-Dh8" secondAttribute="leading" constant="10" id="9Os-US-5lw"/>
                             <constraint firstItem="TwW-y0-Dh8" firstAttribute="trailing" secondItem="N6b-jy-pat" secondAttribute="trailing" constant="10" id="PC7-t2-AnS"/>
-                            <constraint firstItem="1Bc-86-0Ur" firstAttribute="top" secondItem="TwW-y0-Dh8" secondAttribute="top" constant="135" id="YSH-tJ-P9r"/>
+                            <constraint firstItem="1Bc-86-0Ur" firstAttribute="top" secondItem="TwW-y0-Dh8" secondAttribute="top" constant="80" id="YSH-tJ-P9r"/>
                             <constraint firstItem="1Bc-86-0Ur" firstAttribute="trailing" secondItem="FLN-xQ-OBg" secondAttribute="trailing" id="YlQ-Ix-izs"/>
                             <constraint firstItem="1Bc-86-0Ur" firstAttribute="leading" secondItem="FLN-xQ-OBg" secondAttribute="leading" id="YqZ-Af-7DB"/>
                             <constraint firstItem="1Bc-86-0Ur" firstAttribute="bottom" secondItem="FLN-xQ-OBg" secondAttribute="bottom" id="aOT-YQ-bTG"/>
@@ -491,11 +538,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFa-9J-U5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="17"/>
+            <point key="canvasLocation" x="984.79999999999995" y="16.641679160419791"/>
         </scene>
     </scenes>
     <resources>
         <image name="About_Icon-App-60x60" width="60" height="60"/>
-        <image name="copyRight" width="751" height="90"/>
+        <image name="copyRight" width="1502" height="180"/>
     </resources>
 </document>
