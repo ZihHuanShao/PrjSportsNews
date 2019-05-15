@@ -6,44 +6,19 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		FB967FF9676EB9B886760D8D9C68EAD9 /* Google-Mobile-Ads-SDK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = F67A7AE46A4499AD980CC96708B2606E /* Build configuration list for PBXAggregateTarget "Google-Mobile-Ads-SDK" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = "Google-Mobile-Ads-SDK";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		24DC100D10768D9206801CFE9A5BF576 /* Pods-PrjSportsNews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3187915BC4C9E6BACFCECF23EF541D69 /* Pods-PrjSportsNews-dummy.m */; };
-		723BF0C377D3A7D1F86A86D7497FB1C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		C721E2293DFE64B2008E1DAF4AAFAF17 /* Pods-PrjSportsNews-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E008832251BA11F8AB4ECB780B01663E /* Pods-PrjSportsNews-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B1F6AAC647977795D46E24C8D43F442 /* Pods-PrjSportsNews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3187915BC4C9E6BACFCECF23EF541D69 /* Pods-PrjSportsNews-dummy.m */; };
+		2117C4463B6DBE762A404574FA7D9291 /* Pods-PrjSportsNews-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E008832251BA11F8AB4ECB780B01663E /* Pods-PrjSportsNews-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7960AEF4DFAC59AC8796936F54622901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A54A504CF31E8EB75D8B1C0078262997 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB967FF9676EB9B886760D8D9C68EAD9;
-			remoteInfo = "Google-Mobile-Ads-SDK";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3187915BC4C9E6BACFCECF23EF541D69 /* Pods-PrjSportsNews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrjSportsNews-dummy.m"; sourceTree = "<group>"; };
 		716799CCBAAF0B0584E29D4AFB5261D5 /* Pods-PrjSportsNews.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PrjSportsNews.modulemap"; sourceTree = "<group>"; };
 		75A0202D4353CBD6477FD8643DEF4E2B /* Pods_PrjSportsNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrjSportsNews.framework; path = "Pods-PrjSportsNews.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB480CF70A25BCF45F99F22B0744A0F /* Pods-PrjSportsNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrjSportsNews.debug.xcconfig"; sourceTree = "<group>"; };
-		80A7E93AC5CF57DC0E34FAEAE5BB4380 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		8F684D0AC170A6DABF4F9B2597991442 /* Pods-PrjSportsNews-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrjSportsNews-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3010D9E77ED12F0D834DD5F035A5954 /* Google-Mobile-Ads-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.xcconfig"; sourceTree = "<group>"; };
-		B09EEAB35E5DCC49E1D60E4F909F3808 /* libGoogleMobileAds.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleMobileAds.a; path = Libraries/libGoogleMobileAds.a; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DB9D553996F7A8E58DF4FAE02C02F6AE /* Pods-PrjSportsNews-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrjSportsNews-Info.plist"; sourceTree = "<group>"; };
 		DC6007FBE8DAB2917BA76C52659012CC /* Pods-PrjSportsNews-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrjSportsNews-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -52,11 +27,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4BD25914ADC0ABAAC2BD49013F037CB8 /* Frameworks */ = {
+		43B27976CAA0AE72062285DD1ACB8C09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				723BF0C377D3A7D1F86A86D7497FB1C7 /* Foundation.framework in Frameworks */,
+				7960AEF4DFAC59AC8796936F54622901 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,14 +62,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6B211663DCEEBAED89B50D8384CA363D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EA23766AED70F7AC4B12E621FB8862AC /* Google-Mobile-Ads-SDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +83,6 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				6B211663DCEEBAED89B50D8384CA363D /* Pods */,
 				BD21D67DA2D46DEDC23A3BADF22555D7 /* Products */,
 				52718B65218A7E1FBE8856BBFE26DFD5 /* Targets Support Files */,
 			);
@@ -130,61 +96,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D226A03AEFABBBF00689384C83FAA53B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				80A7E93AC5CF57DC0E34FAEAE5BB4380 /* GoogleMobileAds.framework */,
-				B09EEAB35E5DCC49E1D60E4F909F3808 /* libGoogleMobileAds.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EA23766AED70F7AC4B12E621FB8862AC /* Google-Mobile-Ads-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				D226A03AEFABBBF00689384C83FAA53B /* Frameworks */,
-				F8970F4A22477C4C0D068E4E7CF50607 /* Support Files */,
-			);
-			name = "Google-Mobile-Ads-SDK";
-			path = "Google-Mobile-Ads-SDK";
-			sourceTree = "<group>";
-		};
-		F8970F4A22477C4C0D068E4E7CF50607 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A3010D9E77ED12F0D834DD5F035A5954 /* Google-Mobile-Ads-SDK.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Google-Mobile-Ads-SDK";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FB413CF131982966357C769FAB0C031E /* Headers */ = {
+		78158BB4FF871E56F64E6D36FFD2CB66 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C721E2293DFE64B2008E1DAF4AAFAF17 /* Pods-PrjSportsNews-umbrella.h in Headers */,
+				2117C4463B6DBE762A404574FA7D9291 /* Pods-PrjSportsNews-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5EEC0848CF375F3F2BABEA1B8AF2FC23 /* Pods-PrjSportsNews */ = {
+		6EB8519C86691A41859EDD081C1BD73B /* Pods-PrjSportsNews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82DAD552652877EEC70CA9E604D24113 /* Build configuration list for PBXNativeTarget "Pods-PrjSportsNews" */;
+			buildConfigurationList = F4897075560FAF2C5C1191794CF08CB5 /* Build configuration list for PBXNativeTarget "Pods-PrjSportsNews" */;
 			buildPhases = (
-				FB413CF131982966357C769FAB0C031E /* Headers */,
-				C53A4C1265899F2179A9234567278AA2 /* Sources */,
-				4BD25914ADC0ABAAC2BD49013F037CB8 /* Frameworks */,
-				CF03FE65B548DCD64AE3A7ED4292E5D1 /* Resources */,
+				78158BB4FF871E56F64E6D36FFD2CB66 /* Headers */,
+				84D06C98E383EF74AD4D297553886FA4 /* Sources */,
+				43B27976CAA0AE72062285DD1ACB8C09 /* Frameworks */,
+				6BABFDE0EAA60675E121CF249C8083A2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C1D36445337624BAB7E471DF19F5E1E9 /* PBXTargetDependency */,
 			);
 			name = "Pods-PrjSportsNews";
 			productName = "Pods-PrjSportsNews";
@@ -212,14 +149,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB967FF9676EB9B886760D8D9C68EAD9 /* Google-Mobile-Ads-SDK */,
-				5EEC0848CF375F3F2BABEA1B8AF2FC23 /* Pods-PrjSportsNews */,
+				6EB8519C86691A41859EDD081C1BD73B /* Pods-PrjSportsNews */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CF03FE65B548DCD64AE3A7ED4292E5D1 /* Resources */ = {
+		6BABFDE0EAA60675E121CF249C8083A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,63 +165,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C53A4C1265899F2179A9234567278AA2 /* Sources */ = {
+		84D06C98E383EF74AD4D297553886FA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DC100D10768D9206801CFE9A5BF576 /* Pods-PrjSportsNews-dummy.m in Sources */,
+				0B1F6AAC647977795D46E24C8D43F442 /* Pods-PrjSportsNews-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C1D36445337624BAB7E471DF19F5E1E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Google-Mobile-Ads-SDK";
-			target = FB967FF9676EB9B886760D8D9C68EAD9 /* Google-Mobile-Ads-SDK */;
-			targetProxy = A54A504CF31E8EB75D8B1C0078262997 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		023CB5200D45777F43E6420DAA17BE4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BB480CF70A25BCF45F99F22B0744A0F /* Pods-PrjSportsNews.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PrjSportsNews/Pods-PrjSportsNews-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PrjSportsNews/Pods-PrjSportsNews.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		07488D4657FB0A78086563621D425F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -350,23 +240,7 @@
 			};
 			name = Debug;
 		};
-		3CE32AB55CF6A234C84C006365CAD9DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3010D9E77ED12F0D834DD5F035A5954 /* Google-Mobile-Ads-SDK.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9467633C134124E60E7BDAEC14B927AE /* Release */ = {
+		74A98CA71A8FBEDBBBAE51C38856EEBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA09C7FD2BBC9023215C99E6EB9E0E27 /* Pods-PrjSportsNews.release.xcconfig */;
 			buildSettings = {
@@ -403,6 +277,43 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		79E24ECD2AA9709BFA0C16F8FEE271A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB480CF70A25BCF45F99F22B0744A0F /* Pods-PrjSportsNews.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PrjSportsNews/Pods-PrjSportsNews-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PrjSportsNews/Pods-PrjSportsNews.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		A1962E6FF39BBAC201A2E5DDF99557DF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -464,23 +375,6 @@
 			};
 			name = Release;
 		};
-		A69E6F385741A51EF83D732B12CC8A25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3010D9E77ED12F0D834DD5F035A5954 /* Google-Mobile-Ads-SDK.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -493,20 +387,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82DAD552652877EEC70CA9E604D24113 /* Build configuration list for PBXNativeTarget "Pods-PrjSportsNews" */ = {
+		F4897075560FAF2C5C1191794CF08CB5 /* Build configuration list for PBXNativeTarget "Pods-PrjSportsNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				023CB5200D45777F43E6420DAA17BE4E /* Debug */,
-				9467633C134124E60E7BDAEC14B927AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F67A7AE46A4499AD980CC96708B2606E /* Build configuration list for PBXAggregateTarget "Google-Mobile-Ads-SDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CE32AB55CF6A234C84C006365CAD9DB /* Debug */,
-				A69E6F385741A51EF83D732B12CC8A25 /* Release */,
+				79E24ECD2AA9709BFA0C16F8FEE271A7 /* Debug */,
+				74A98CA71A8FBEDBBBAE51C38856EEBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

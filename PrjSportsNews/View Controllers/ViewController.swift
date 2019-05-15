@@ -8,7 +8,6 @@
 
 import UIKit
 import AudioToolbox
-import GoogleMobileAds
 
 struct NewsItem {
     var title: String? // News title
