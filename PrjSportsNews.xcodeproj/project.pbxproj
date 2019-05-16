@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1B9AC5228DD5530029C47B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1B9AC4228DD5530029C47B /* WebKit.framework */; };
 		857B00499A64C6E88A257045 /* Pods_PrjSportsNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DB43BB6920D1D886A92D89 /* Pods_PrjSportsNews.framework */; };
 		E91CDD0C2216A7F4003A7823 /* RssParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CDD0B2216A7F4003A7823 /* RssParserDelegate.swift */; };
 		E95C9EB6221BA4C800CDE469 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		10DB43BB6920D1D886A92D89 /* Pods_PrjSportsNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrjSportsNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1B9AC4228DD5530029C47B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		5B020C7C80980DB780FD8670 /* Pods-PrjSportsNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrjSportsNews.release.xcconfig"; path = "Target Support Files/Pods-PrjSportsNews/Pods-PrjSportsNews.release.xcconfig"; sourceTree = "<group>"; };
 		E91CDD0B2216A7F4003A7823 /* RssParserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssParserDelegate.swift; sourceTree = "<group>"; };
 		E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1B9AC5228DD5530029C47B /* WebKit.framework in Frameworks */,
 				857B00499A64C6E88A257045 /* Pods_PrjSportsNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +107,7 @@
 		6C829F482B2B0CE5F483CD34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E1B9AC4228DD5530029C47B /* WebKit.framework */,
 				10DB43BB6920D1D886A92D89 /* Pods_PrjSportsNews.framework */,
 			);
 			name = Frameworks;
