@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E1B9AC5228DD5530029C47B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1B9AC4228DD5530029C47B /* WebKit.framework */; };
+		4E143E47229DA1E1006035E6 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E143E46229DA1E1006035E6 /* FirstPageViewController.swift */; };
+		4E179064229E8A830030C87E /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E179063229E8A830030C87E /* SecondPageViewController.swift */; };
+		4E2C42C32295346C006E3E13 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1B9AC4228DD5530029C47B /* WebKit.framework */; };
+		4E3FE226229FC0540057BDE3 /* MediaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FE224229FC0540057BDE3 /* MediaListTableViewCell.swift */; };
+		4E3FE227229FC0540057BDE3 /* MediaListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FE225229FC0540057BDE3 /* MediaListTableViewCell.xib */; };
+		4E3FE229229FCCDD0057BDE3 /* MediaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FE228229FCCDD0057BDE3 /* MediaListTableViewController.swift */; };
+		4E3FE22D229FEBDF0057BDE3 /* MediaListTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FE22B229FEBDF0057BDE3 /* MediaListTitleTableViewCell.swift */; };
+		4E3FE22E229FEBDF0057BDE3 /* MediaListTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FE22C229FEBDF0057BDE3 /* MediaListTitleTableViewCell.xib */; };
+		4E3FE230229FEC050057BDE3 /* MediaListTitleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FE22F229FEC050057BDE3 /* MediaListTitleTableViewController.swift */; };
 		857B00499A64C6E88A257045 /* Pods_PrjSportsNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DB43BB6920D1D886A92D89 /* Pods_PrjSportsNews.framework */; };
 		E91CDD0C2216A7F4003A7823 /* RssParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CDD0B2216A7F4003A7823 /* RssParserDelegate.swift */; };
 		E95C9EB6221BA4C800CDE469 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */; };
@@ -29,7 +37,15 @@
 
 /* Begin PBXFileReference section */
 		10DB43BB6920D1D886A92D89 /* Pods_PrjSportsNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrjSportsNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E143E46229DA1E1006035E6 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		4E179063229E8A830030C87E /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		4E1B9AC4228DD5530029C47B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4E3FE224229FC0540057BDE3 /* MediaListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListTableViewCell.swift; sourceTree = "<group>"; };
+		4E3FE225229FC0540057BDE3 /* MediaListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListTableViewCell.xib; sourceTree = "<group>"; };
+		4E3FE228229FCCDD0057BDE3 /* MediaListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListTableViewController.swift; sourceTree = "<group>"; };
+		4E3FE22B229FEBDF0057BDE3 /* MediaListTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListTitleTableViewCell.swift; sourceTree = "<group>"; };
+		4E3FE22C229FEBDF0057BDE3 /* MediaListTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListTitleTableViewCell.xib; sourceTree = "<group>"; };
+		4E3FE22F229FEC050057BDE3 /* MediaListTitleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListTitleTableViewController.swift; sourceTree = "<group>"; };
 		5B020C7C80980DB780FD8670 /* Pods-PrjSportsNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrjSportsNews.release.xcconfig"; path = "Target Support Files/Pods-PrjSportsNews/Pods-PrjSportsNews.release.xcconfig"; sourceTree = "<group>"; };
 		E91CDD0B2216A7F4003A7823 /* RssParserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssParserDelegate.swift; sourceTree = "<group>"; };
 		E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -57,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1B9AC5228DD5530029C47B /* WebKit.framework in Frameworks */,
+				4E2C42C32295346C006E3E13 /* WebKit.framework in Frameworks */,
 				857B00499A64C6E88A257045 /* Pods_PrjSportsNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,9 +81,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2C42BB2294533A006E3E13 /* ofUpCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E96CAC9B221512B800E83DBF /* LabelCollectionViewCell.swift */,
+			);
+			path = ofUpCollectionView;
+			sourceTree = "<group>";
+		};
+		4E2C42BC22945352006E3E13 /* ofDownCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E96CACA42215AEEB00E83DBF /* TableViewCollectionViewCell.swift */,
+				E96CACA52215AEEB00E83DBF /* TableViewCollectionViewCell.xib */,
+			);
+			path = ofDownCollectionView;
+			sourceTree = "<group>";
+		};
+		4E2C42BD2294540A006E3E13 /* ofHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */,
+			);
+			path = ofHomeViewController;
+			sourceTree = "<group>";
+		};
+		4E2C42BE22945D59006E3E13 /* ofTableViewCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E96CACA92215B2DB00E83DBF /* InformationCell.swift */,
+				E96CACAA2215B2DB00E83DBF /* InformationCell.xib */,
+			);
+			path = ofTableViewCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4E3FE22A229FE93E0057BDE3 /* ofMediaListTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E3FE224229FC0540057BDE3 /* MediaListTableViewCell.swift */,
+				4E3FE225229FC0540057BDE3 /* MediaListTableViewCell.xib */,
+			);
+			path = ofMediaListTableViewController;
+			sourceTree = "<group>";
+		};
+		4E3FE231229FEC100057BDE3 /* ofMediaListTitleTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E3FE22B229FEBDF0057BDE3 /* MediaListTitleTableViewCell.swift */,
+				4E3FE22C229FEBDF0057BDE3 /* MediaListTitleTableViewCell.xib */,
+			);
+			path = ofMediaListTitleTableViewController;
+			sourceTree = "<group>";
+		};
 		4E63DE8F2280A76A00776C85 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E143E46229DA1E1006035E6 /* FirstPageViewController.swift */,
+				4E179063229E8A830030C87E /* SecondPageViewController.swift */,
+				4E3FE228229FCCDD0057BDE3 /* MediaListTableViewController.swift */,
+				4E3FE22F229FEC050057BDE3 /* MediaListTitleTableViewController.swift */,
 				E967E054221803E0002C62CE /* WebViewViewController.swift */,
 				E96CAC8922150E5200E83DBF /* ViewController.swift */,
 				E95C9EB9221C337400CDE469 /* AboutMeViewController.swift */,
@@ -79,10 +151,9 @@
 		4E63DE902280A79C00776C85 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				E96CACA42215AEEB00E83DBF /* TableViewCollectionViewCell.swift */,
-				E96CACA52215AEEB00E83DBF /* TableViewCollectionViewCell.xib */,
-				E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */,
-				E96CAC9B221512B800E83DBF /* LabelCollectionViewCell.swift */,
+				4E2C42BB2294533A006E3E13 /* ofUpCollectionView */,
+				4E2C42BC22945352006E3E13 /* ofDownCollectionView */,
+				4E2C42BD2294540A006E3E13 /* ofHomeViewController */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -90,8 +161,9 @@
 		4E63DE912280A84C00776C85 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				E96CACA92215B2DB00E83DBF /* InformationCell.swift */,
-				E96CACAA2215B2DB00E83DBF /* InformationCell.xib */,
+				4E3FE231229FEC100057BDE3 /* ofMediaListTitleTableViewController */,
+				4E3FE22A229FE93E0057BDE3 /* ofMediaListTableViewController */,
+				4E2C42BE22945D59006E3E13 /* ofTableViewCollectionViewCell */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -233,11 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E967E0582218056F002C62CE /* Webview.storyboard in Resources */,
+				4E3FE22E229FEBDF0057BDE3 /* MediaListTitleTableViewCell.xib in Resources */,
 				E96CAC9222150E5300E83DBF /* LaunchScreen.storyboard in Resources */,
 				E96CAC8F22150E5300E83DBF /* Assets.xcassets in Resources */,
 				E96CACA72215AEEB00E83DBF /* TableViewCollectionViewCell.xib in Resources */,
 				E96CAC8D22150E5200E83DBF /* Main.storyboard in Resources */,
 				E96CACAC2215B2DB00E83DBF /* InformationCell.xib in Resources */,
+				4E3FE227229FC0540057BDE3 /* MediaListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +349,18 @@
 			files = (
 				E96CAC9C221512B800E83DBF /* LabelCollectionViewCell.swift in Sources */,
 				E96CAC8A22150E5200E83DBF /* ViewController.swift in Sources */,
+				4E143E47229DA1E1006035E6 /* FirstPageViewController.swift in Sources */,
 				E91CDD0C2216A7F4003A7823 /* RssParserDelegate.swift in Sources */,
+				4E3FE229229FCCDD0057BDE3 /* MediaListTableViewController.swift in Sources */,
 				E96CACAB2215B2DB00E83DBF /* InformationCell.swift in Sources */,
 				E96CACA62215AEEB00E83DBF /* TableViewCollectionViewCell.swift in Sources */,
+				4E3FE230229FEC050057BDE3 /* MediaListTitleTableViewController.swift in Sources */,
 				E95C9EB8221BA4D900CDE469 /* HomeViewController.swift in Sources */,
+				4E3FE22D229FEBDF0057BDE3 /* MediaListTitleTableViewCell.swift in Sources */,
 				E95C9EBA221C337400CDE469 /* AboutMeViewController.swift in Sources */,
+				4E3FE226229FC0540057BDE3 /* MediaListTableViewCell.swift in Sources */,
 				E96CAC8822150E5200E83DBF /* AppDelegate.swift in Sources */,
+				4E179064229E8A830030C87E /* SecondPageViewController.swift in Sources */,
 				E967E055221803E0002C62CE /* WebViewViewController.swift in Sources */,
 				E95C9EB6221BA4C800CDE469 /* HomeCollectionViewCell.swift in Sources */,
 			);

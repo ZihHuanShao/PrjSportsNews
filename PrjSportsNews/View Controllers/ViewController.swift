@@ -344,7 +344,7 @@ extension ViewController: UICollectionViewDelegate {
                 cell.newsInfoFromVC = okAllObjectDictValue
             }
             cell.newsLogoFromVC = publishersInfo[indexPath.row].logo
-            cell.delegate       = self
+            cell.delegate       = self  // Assign UICollectionViewDataSource protocol to ViewController
             cell.updateUI()
             return cell
             
