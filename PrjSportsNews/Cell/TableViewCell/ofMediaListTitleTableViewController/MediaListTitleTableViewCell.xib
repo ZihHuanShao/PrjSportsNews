@@ -85,7 +85,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.89908854169999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="YQj-1h-VBJ"/>
-            <point key="canvasLocation" x="40.579710144927539" y="34.821428571428569"/>
+            <point key="canvasLocation" x="-113" y="35"/>
         </tableViewCell>
     </objects>
 </document>

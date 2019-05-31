@@ -14,7 +14,7 @@ class MediaListTitleTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.dataSource = self
-        myTableView.delegate = self
+//        myTableView.delegate = self
         myTableView.register(UINib(nibName: "MediaListTitleTableViewCell", bundle: nil), forCellReuseIdentifier: "MediaListTitleCell")
     }
 

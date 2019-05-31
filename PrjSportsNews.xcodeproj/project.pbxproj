@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4E143E47229DA1E1006035E6 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E143E46229DA1E1006035E6 /* FirstPageViewController.swift */; };
 		4E179064229E8A830030C87E /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E179063229E8A830030C87E /* SecondPageViewController.swift */; };
+		4E18C44922A184920001B957 /* LatestBulletinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18C44822A184920001B957 /* LatestBulletinViewController.swift */; };
+		4E18C44D22A187BB0001B957 /* LatestBulletinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E18C44B22A187BB0001B957 /* LatestBulletinTableViewCell.swift */; };
+		4E18C44E22A187BB0001B957 /* LatestBulletinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E18C44C22A187BB0001B957 /* LatestBulletinTableViewCell.xib */; };
 		4E2C42C32295346C006E3E13 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1B9AC4228DD5530029C47B /* WebKit.framework */; };
 		4E3FE226229FC0540057BDE3 /* MediaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FE224229FC0540057BDE3 /* MediaListTableViewCell.swift */; };
 		4E3FE227229FC0540057BDE3 /* MediaListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3FE225229FC0540057BDE3 /* MediaListTableViewCell.xib */; };
@@ -19,7 +22,6 @@
 		857B00499A64C6E88A257045 /* Pods_PrjSportsNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DB43BB6920D1D886A92D89 /* Pods_PrjSportsNews.framework */; };
 		E91CDD0C2216A7F4003A7823 /* RssParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CDD0B2216A7F4003A7823 /* RssParserDelegate.swift */; };
 		E95C9EB6221BA4C800CDE469 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */; };
-		E95C9EB8221BA4D900CDE469 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95C9EB7221BA4D900CDE469 /* HomeViewController.swift */; };
 		E95C9EBA221C337400CDE469 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95C9EB9221C337400CDE469 /* AboutMeViewController.swift */; };
 		E967E055221803E0002C62CE /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E967E054221803E0002C62CE /* WebViewViewController.swift */; };
 		E967E0582218056F002C62CE /* Webview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E967E0572218056F002C62CE /* Webview.storyboard */; };
@@ -39,6 +41,9 @@
 		10DB43BB6920D1D886A92D89 /* Pods_PrjSportsNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrjSportsNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E143E46229DA1E1006035E6 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		4E179063229E8A830030C87E /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
+		4E18C44822A184920001B957 /* LatestBulletinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBulletinViewController.swift; sourceTree = "<group>"; };
+		4E18C44B22A187BB0001B957 /* LatestBulletinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBulletinTableViewCell.swift; sourceTree = "<group>"; };
+		4E18C44C22A187BB0001B957 /* LatestBulletinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestBulletinTableViewCell.xib; sourceTree = "<group>"; };
 		4E1B9AC4228DD5530029C47B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4E3FE224229FC0540057BDE3 /* MediaListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListTableViewCell.swift; sourceTree = "<group>"; };
 		4E3FE225229FC0540057BDE3 /* MediaListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListTableViewCell.xib; sourceTree = "<group>"; };
@@ -49,7 +54,6 @@
 		5B020C7C80980DB780FD8670 /* Pods-PrjSportsNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrjSportsNews.release.xcconfig"; path = "Target Support Files/Pods-PrjSportsNews/Pods-PrjSportsNews.release.xcconfig"; sourceTree = "<group>"; };
 		E91CDD0B2216A7F4003A7823 /* RssParserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssParserDelegate.swift; sourceTree = "<group>"; };
 		E95C9EB5221BA4C800CDE469 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		E95C9EB7221BA4D900CDE469 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E95C9EB9221C337400CDE469 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		E967E054221803E0002C62CE /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		E967E0572218056F002C62CE /* Webview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Webview.storyboard; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E18C44A22A1877D0001B957 /* ofLatestBulletinViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E18C44B22A187BB0001B957 /* LatestBulletinTableViewCell.swift */,
+				4E18C44C22A187BB0001B957 /* LatestBulletinTableViewCell.xib */,
+			);
+			path = ofLatestBulletinViewController;
+			sourceTree = "<group>";
+		};
 		4E2C42BB2294533A006E3E13 /* ofUpCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +156,7 @@
 				E967E054221803E0002C62CE /* WebViewViewController.swift */,
 				E96CAC8922150E5200E83DBF /* ViewController.swift */,
 				E95C9EB9221C337400CDE469 /* AboutMeViewController.swift */,
-				E95C9EB7221BA4D900CDE469 /* HomeViewController.swift */,
+				4E18C44822A184920001B957 /* LatestBulletinViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 		4E63DE912280A84C00776C85 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				4E18C44A22A1877D0001B957 /* ofLatestBulletinViewController */,
 				4E3FE231229FEC100057BDE3 /* ofMediaListTitleTableViewController */,
 				4E3FE22A229FE93E0057BDE3 /* ofMediaListTableViewController */,
 				4E2C42BE22945D59006E3E13 /* ofTableViewCollectionViewCell */,
@@ -312,6 +326,7 @@
 				E96CAC8D22150E5200E83DBF /* Main.storyboard in Resources */,
 				E96CACAC2215B2DB00E83DBF /* InformationCell.xib in Resources */,
 				4E3FE227229FC0540057BDE3 /* MediaListTableViewCell.xib in Resources */,
+				4E18C44E22A187BB0001B957 /* LatestBulletinTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,12 +367,13 @@
 				4E143E47229DA1E1006035E6 /* FirstPageViewController.swift in Sources */,
 				E91CDD0C2216A7F4003A7823 /* RssParserDelegate.swift in Sources */,
 				4E3FE229229FCCDD0057BDE3 /* MediaListTableViewController.swift in Sources */,
+				4E18C44D22A187BB0001B957 /* LatestBulletinTableViewCell.swift in Sources */,
 				E96CACAB2215B2DB00E83DBF /* InformationCell.swift in Sources */,
 				E96CACA62215AEEB00E83DBF /* TableViewCollectionViewCell.swift in Sources */,
 				4E3FE230229FEC050057BDE3 /* MediaListTitleTableViewController.swift in Sources */,
-				E95C9EB8221BA4D900CDE469 /* HomeViewController.swift in Sources */,
 				4E3FE22D229FEBDF0057BDE3 /* MediaListTitleTableViewCell.swift in Sources */,
 				E95C9EBA221C337400CDE469 /* AboutMeViewController.swift in Sources */,
+				4E18C44922A184920001B957 /* LatestBulletinViewController.swift in Sources */,
 				4E3FE226229FC0540057BDE3 /* MediaListTableViewCell.swift in Sources */,
 				E96CAC8822150E5200E83DBF /* AppDelegate.swift in Sources */,
 				4E179064229E8A830030C87E /* SecondPageViewController.swift in Sources */,

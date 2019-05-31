@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PrjSportsNews/View Controllers/ViewController.swift"
-            timestampString = "580964043.206713"
+            timestampString = "581016731.159164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
             landmarkName = "didTapCell(_:)"
             landmarkType = "7">
          </BreakpointContent>

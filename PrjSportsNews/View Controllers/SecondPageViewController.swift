@@ -10,12 +10,17 @@ import UIKit
 
 class SecondPageViewController: UIViewController {
 
+    @IBAction func okButton(_ sender: UIButton) {
+        let storyboard       = UIStoryboard(name: "Main", bundle: nil)
+        let viewController   = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
 //        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 200, green: 70, blue: 61, alpha: 1.0)
+//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 200, green: 70, blue: 61, alpha: 1.0)
         
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.red]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes

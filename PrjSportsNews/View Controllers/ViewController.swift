@@ -159,13 +159,13 @@ class ViewController: UIViewController {
     @IBAction func leftBarButtonAction(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "軟體資訊", message: "", preferredStyle: .actionSheet)
         
-        let firstAction = UIAlertAction(title: "最新消息", style: .default, handler:
+        let firstAction = UIAlertAction(title: "最新公告", style: .default, handler:
         {
             (alert: UIAlertAction!) -> Void in
             let storyboard              = UIStoryboard(name: "Main", bundle: nil)
-            let aboutMeViewController   = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            aboutMeViewController.title = "最新消息"
-            self.navigationController?.pushViewController(aboutMeViewController, animated: true)
+            let latestBulletinViewController   = storyboard.instantiateViewController(withIdentifier: "LatestBulletinViewController") as! LatestBulletinViewController
+            latestBulletinViewController.title = "最新公告"
+            self.navigationController?.pushViewController(latestBulletinViewController, animated: true)
         })
         
         let secondAction = UIAlertAction(title: "關於App", style: .default, handler:
@@ -177,8 +177,18 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(aboutMeViewController, animated: true)
         })
         
+        let thirdAction = UIAlertAction(title: "關於版權", style: .default, handler:
+        {
+            (alert: UIAlertAction!) -> Void in
+            let storyboard              = UIStoryboard(name: "Main", bundle: nil)
+            let aboutMeViewController   = storyboard.instantiateViewController(withIdentifier: "SecondPageViewController") as! SecondPageViewController
+            aboutMeViewController.title = "關於版權"
+            self.navigationController?.pushViewController(aboutMeViewController, animated: true)
+        })
+        
         alertController.addAction(firstAction)
         alertController.addAction(secondAction)
+        alertController.addAction(thirdAction)
         present(alertController, animated: true)
     }
     
