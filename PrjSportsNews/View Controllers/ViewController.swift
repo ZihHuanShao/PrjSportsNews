@@ -208,6 +208,7 @@ class ViewController: UIViewController {
     
     @IBAction func rightBarButtonAction(_ sender: UIBarButtonItem) {
         updateDataSource()
+        self.title = "台灣體育新聞"
     }
     
     func downloadXML(_ xmlAddress: String, _ publisherIndex: Int) {
