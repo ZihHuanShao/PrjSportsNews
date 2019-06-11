@@ -30,12 +30,10 @@ fileprivate enum Media: String {
     case udnTWInNPB         = "UDN(台將征戰日職)"
     case udnCTBA            = "UDN(棒協賽事特報)"
     case udnNBA             = "UDN(NBA)"
-    case udnJeremyLin       = "UDN(林書豪專區)"
     case udnBaseball        = "UDN(棒球)"
-    case udnBaseball30Years = "UDN(中職30年)"
+    case udnBaseball30Years = "UDN(中職30年)"//
     case udnMLB             = "UDN(MLB)"
     case udnBasketball      = "UDN(籃球)"
-    case udnJHBL            = "UDN(JHBL)"
     case udnComprehensive   = "UDN(綜合)"
     case udnRunnig          = "UDN(路跑)"
     case svNBA              = "運動視界(NBA)"
@@ -57,9 +55,20 @@ fileprivate enum Media: String {
     case svTriathlon        = "運動視界(鐵人三項)"
     case svXgames           = "運動視界(極限運動)"
     case svOthersports      = "運動視界(其他運動)"
+    case svCarRacing        = "運動視界(賽車)"
+    case svsSportsStored    = "運動視界(運動收藏)"
+    case svNFL              = "運動視界(美足聯盟)"
+    case svWrestle          = "運動視界(格鬥摔角)"
+    case svFitness          = "運動視界(健身訓練)"
+    case svSportLottery     = "運動視界(運彩)"
+    case svCheerleading     = "運動視界(競技啦啦隊)"
+    case svSki              = "運動視界(滑雪)"
+    case svHiking           = "運動視界(登山健行)"
+    case multiSports        = "運動視界(綜合運動)"
     
     static func getAllMedia() -> [Media] {
-        return [.ettoday, .ltn, .yahoo, .cts, .chinatimes, .sina, udnTWInNPB, .udnCTBA, .udnNBA, .udnJeremyLin, .udnBaseball, .udnBaseball30Years, .udnMLB, .udnBasketball, .udnJHBL, .udnComprehensive, .udnRunnig, .svNBA, .svBasketball, .svMLB, .svCPBL, .svNPB, .svBaseball, .svTennis, .svVolleyball, .svFootball, .svBadminton, .svTabletennis, .svTrackandfield, .svSwimming, .svGolf, .svRunning, .svBike, .svTriathlon, .svXgames, .svOthersports]
+        return [.ettoday, .ltn, .yahoo, .cts, .chinatimes, .sina, udnTWInNPB, .udnCTBA, .udnNBA, .udnBaseball, .udnBaseball30Years, .udnMLB, .udnBasketball, .udnComprehensive, .udnRunnig, .svNBA, .svBasketball, .svMLB, .svCPBL, .svNPB, .svBaseball, .svTennis, .svVolleyball, .svFootball, .svBadminton, .svTabletennis, .svTrackandfield, .svSwimming, .svGolf, .svRunning, .svBike, .svTriathlon, .svXgames, .svOthersports, .svCarRacing, .svsSportsStored, .svNFL, .svWrestle, .svFitness, .svSportLottery, .svCheerleading, .svSki, .svHiking, .multiSports
+               ]
     }
     
     // convert to enum
@@ -74,33 +83,41 @@ fileprivate enum Media: String {
         case 6:     return .udnTWInNPB
         case 7:     return .udnCTBA
         case 8:     return .udnNBA
-        case 9:     return .udnJeremyLin
-        case 10:    return .udnBaseball
-        case 11:    return .udnBaseball30Years
-        case 12:    return .udnMLB
-        case 13:    return .udnBasketball
-        case 14:    return .udnJHBL
-        case 15:    return .udnComprehensive
-        case 16:    return .udnRunnig
-        case 17:    return .svNBA
-        case 18:    return .svBasketball
-        case 19:    return .svMLB
-        case 20:    return .svCPBL
-        case 21:    return .svNPB
-        case 22:    return .svBaseball
-        case 23:    return .svTennis
-        case 24:    return .svVolleyball
-        case 25:    return .svFootball
-        case 26:    return .svBadminton
-        case 27:    return .svTabletennis
-        case 28:    return .svTrackandfield
-        case 29:    return .svSwimming
-        case 30:    return .svGolf
-        case 31:    return .svRunning
-        case 32:    return .svBike
-        case 33:    return .svTriathlon
-        case 34:    return .svXgames
-        case 35:    return .svOthersports
+        case 9:     return .udnBaseball
+        case 10:    return .udnBaseball30Years
+        case 11:    return .udnMLB
+        case 12:    return .udnBasketball
+        case 13:    return .udnComprehensive
+        case 14:    return .udnRunnig
+        case 15:    return .svNBA
+        case 16:    return .svBasketball
+        case 17:    return .svMLB
+        case 18:    return .svCPBL
+        case 19:    return .svNPB
+        case 20:    return .svBaseball
+        case 21:    return .svTennis
+        case 22:    return .svVolleyball
+        case 23:    return .svFootball
+        case 24:    return .svBadminton
+        case 25:    return .svTabletennis
+        case 26:    return .svTrackandfield
+        case 27:    return .svSwimming
+        case 28:    return .svGolf
+        case 29:    return .svRunning
+        case 30:    return .svBike
+        case 31:    return .svTriathlon
+        case 32:    return .svXgames
+        case 33:    return .svOthersports
+        case 34:    return .svCarRacing
+        case 35:    return .svsSportsStored
+        case 36:    return .svNFL
+        case 37:    return .svWrestle
+        case 38:    return .svFitness
+        case 39:    return .svSportLottery
+        case 40:    return .svCheerleading
+        case 41:    return .svSki
+        case 42:    return .svHiking
+        case 43:    return .multiSports
         default:    fatalError()
         }
     }
@@ -118,42 +135,51 @@ class ViewController: UIViewController {
     private var isDownloading       = false
     private var publishersInfo      =
         [
-            PublishersInfo(publisher: "ETtoday",        address: "http://feeds.feedburner.com/ettoday/sport?format=xml",   logo:"Ettoday_Icon-App-60x60"),
-            PublishersInfo(publisher: "自由",            address: "https://news.ltn.com.tw/rss/sports.xml",                 logo:"Ltn_Icon-App-60x60"),
-            PublishersInfo(publisher: "雅虎",            address: "https://tw.news.yahoo.com/rss/sports",                   logo:"Yahoo_Icon-App-60x60"),
-            PublishersInfo(publisher: "華視",            address: "https://news.cts.com.tw/rss/sports.xml",                 logo:"Cts_Icon-App-60x60"),
-            PublishersInfo(publisher: "中時",            address: "https://www.chinatimes.com/rss/realtimenews-sport.xml",  logo:"Ct_Icon-App-60x60"),
-            PublishersInfo(publisher: "新浪",            address: "https://news.sina.com.tw/rss/sports/tw.xml",             logo:"Sina_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(台將征戰日職)", address: "https://udn.com/rssfeed/news/2/7227/8280?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(棒協賽事特報)", address: "https://udn.com/rssfeed/news/2/7227/12960?ch=news",      logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(NBA)",       address: "https://udn.com/rssfeed/news/2/7227/7002?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(林書豪專區)",  address: "https://udn.com/rssfeed/news/2/7227/7489?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(棒球)",       address: "https://udn.com/rssfeed/news/2/7227/7001?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(中職30年)",   address: "https://udn.com/rssfeed/news/2/7227/12822?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(MLB)",       address: "https://udn.com/rssfeed/news/2/7227/6999?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(籃球)",       address: "https://udn.com/rssfeed/news/2/7227/7003?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(JHBL)",      address: "https://udn.com/rssfeed/news/2/7227/12863?ch=news",      logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(綜合)",       address: "https://udn.com/rssfeed/news/2/7227/7005?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(路跑)",       address: "https://udn.com/rssfeed/news/2/7227/7879?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(NBA)",    address: "https://www.sportsv.net/nba/feed",                       logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(籃球)",    address: "https://www.sportsv.net/basketball/feed",                logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(MLB)",    address: "https://www.sportsv.net/mlb/feed",                       logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(CPBL)",   address: "https://www.sportsv.net/cpbl/feed",                      logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(NPB)",    address: "https://www.sportsv.net/npb/feed",                       logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(棒球)",    address: "https://www.sportsv.net/baseball/feed",                  logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(網球)",    address: "https://www.sportsv.net/tennis/feed",                    logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(排球)",    address: "https://www.sportsv.net/volleyball/feed",                logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(足球)",    address: "https://www.sportsv.net/football/feed",                  logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(羽球)",    address: "https://www.sportsv.net/badminton/feed",                 logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(桌球)",    address: "https://www.sportsv.net/tabletennis/feed",               logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(田徑)",    address: "https://www.sportsv.net/trackandfield/feed",             logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(游泳)",    address: "https://www.sportsv.net/swimming/feed",                  logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(高爾夫)",  address: "https://www.sportsv.net/golf/feed",                      logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(路跑)",    address: "https://www.sportsv.net/running/feed",                   logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(單車)",    address: "https://www.sportsv.net/bike/feed",                      logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(鐵人三項)", address: "https://www.sportsv.net/triathlon/feed",                 logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(極限運動)", address: "https://www.sportsv.net/xgames/feed",                    logo:"SportsVision_Icon-App-60x60"),
-            PublishersInfo(publisher: "運動視界(其他運動)", address: "https://www.sportsv.net/othersports/feed",               logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "ETtoday",         address: "http://feeds.feedburner.com/ettoday/sport?format=xml",   logo:"Ettoday_Icon-App-60x60"),
+            PublishersInfo(publisher: "自由",             address: "https://news.ltn.com.tw/rss/sports.xml",                 logo:"Ltn_Icon-App-60x60"),
+            PublishersInfo(publisher: "雅虎",             address: "https://tw.news.yahoo.com/rss/sports",                   logo:"Yahoo_Icon-App-60x60"),
+            PublishersInfo(publisher: "華視",             address: "https://news.cts.com.tw/rss/sports.xml",                 logo:"Cts_Icon-App-60x60"),
+            PublishersInfo(publisher: "中時",             address: "https://www.chinatimes.com/rss/realtimenews-sport.xml",  logo:"Ct_Icon-App-60x60"),
+            PublishersInfo(publisher: "新浪",             address: "https://news.sina.com.tw/rss/sports/tw.xml",             logo:"Sina_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(台將征戰日職)",  address: "https://udn.com/rssfeed/news/2/7227/8280?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(棒協賽事特報)",  address: "https://udn.com/rssfeed/news/2/7227/12960?ch=news",      logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(NBA)",         address: "https://udn.com/rssfeed/news/2/7227/7002?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(棒球)",         address: "https://udn.com/rssfeed/news/2/7227/7001?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(中職30年)",     address: "https://udn.com/rssfeed/news/2/7227/12822?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(MLB)",         address: "https://udn.com/rssfeed/news/2/7227/6999?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(籃球)",         address: "https://udn.com/rssfeed/news/2/7227/7003?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(綜合)",         address: "https://udn.com/rssfeed/news/2/7227/7005?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(路跑)",         address: "https://udn.com/rssfeed/news/2/7227/7879?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(NBA)",      address: "https://www.sportsv.net/nba/feed",                       logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(籃球)",      address: "https://www.sportsv.net/basketball/feed",                logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(MLB)",      address: "https://www.sportsv.net/mlb/feed",                       logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(CPBL)",     address: "https://www.sportsv.net/cpbl/feed",                      logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(NPB)",      address: "https://www.sportsv.net/npb/feed",                       logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(棒球)",      address: "https://www.sportsv.net/baseball/feed",                  logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(網球)",      address: "https://www.sportsv.net/tennis/feed",                    logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(排球)",      address: "https://www.sportsv.net/volleyball/feed",                logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(足球)",      address: "https://www.sportsv.net/football/feed",                  logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(羽球)",      address: "https://www.sportsv.net/badminton/feed",                 logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(桌球)",      address: "https://www.sportsv.net/tabletennis/feed",               logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(田徑)",      address: "https://www.sportsv.net/trackandfield/feed",             logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(游泳)",      address: "https://www.sportsv.net/swimming/feed",                  logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(高爾夫)",    address: "https://www.sportsv.net/golf/feed",                      logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(路跑)",      address: "https://www.sportsv.net/running/feed",                   logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(單車)",      address: "https://www.sportsv.net/bike/feed",                      logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(鐵人三項)",   address: "https://www.sportsv.net/triathlon/feed",                 logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(極限運動)",   address: "https://www.sportsv.net/xgames/feed",                    logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(其他運動)",   address: "https://www.sportsv.net/othersports/feed",               logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(賽車)",      address: "https://www.sportsv.net/f1/feed",                        logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(運動收藏)",   address: "https://www.sportsv.net/memorabilia/feed",               logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(美足聯盟)",   address: "https://www.sportsv.net/nfl/feed",                       logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(格鬥摔角)",   address: "https://www.sportsv.net/wrestling/feed",                 logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(健身訓練)",   address: "https://www.sportsv.net/fitness/feed",                   logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(運彩)",      address: "https://www.sportsv.net/sportslottery/feed",             logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(競技啦啦隊)", address: "https://www.sportsv.net/cheerleading/feed",              logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(滑雪)",      address: "https://www.sportsv.net/ski/feed",                       logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(登山健行)",   address: "https://www.sportsv.net/hiking/feed",                    logo:"SportsVision_Icon-App-60x60"),
+            PublishersInfo(publisher: "運動視界(綜合運動)",   address: "http://www.sportsv.net/othersports/feed",                logo:"SportsVision_Icon-App-60x60"),
+
     ]
     
     @IBAction func leftBarButtonAction(_ sender: UIBarButtonItem) {
@@ -250,12 +276,10 @@ class ViewController: UIViewController {
                         case .udnTWInNPB:           self.allObjectDict[.udnTWInNPB]         = rssParserDelegate.getResult()
                         case .udnCTBA:              self.allObjectDict[.udnCTBA]            = rssParserDelegate.getResult()
                         case .udnNBA:               self.allObjectDict[.udnNBA]             = rssParserDelegate.getResult()
-                        case .udnJeremyLin:         self.allObjectDict[.udnJeremyLin]       = rssParserDelegate.getResult()
                         case .udnBaseball:          self.allObjectDict[.udnBaseball]        = rssParserDelegate.getResult()
                         case .udnBaseball30Years:   self.allObjectDict[.udnBaseball30Years] = rssParserDelegate.getResult()
                         case .udnMLB:               self.allObjectDict[.udnMLB]             = rssParserDelegate.getResult()
                         case .udnBasketball:        self.allObjectDict[.udnBasketball]      = rssParserDelegate.getResult()
-                        case .udnJHBL:              self.allObjectDict[.udnJHBL]            = rssParserDelegate.getResult()
                         case .udnComprehensive:     self.allObjectDict[.udnComprehensive]   = rssParserDelegate.getResult()
                         case .udnRunnig:            self.allObjectDict[.udnRunnig]          = rssParserDelegate.getResult()
                         case .svNBA:                self.allObjectDict[.svNBA]              = rssParserDelegate.getResult()
@@ -277,6 +301,17 @@ class ViewController: UIViewController {
                         case .svTriathlon:          self.allObjectDict[.svTriathlon]        = rssParserDelegate.getResult()
                         case .svXgames:             self.allObjectDict[.svXgames]           = rssParserDelegate.getResult()
                         case .svOthersports:        self.allObjectDict[.svOthersports]      = rssParserDelegate.getResult()
+                        case .svCarRacing:          self.allObjectDict[.svCarRacing]        = rssParserDelegate.getResult()
+                        case .svsSportsStored:      self.allObjectDict[.svsSportsStored]    = rssParserDelegate.getResult()
+                        case .svNFL:                self.allObjectDict[.svNFL]              = rssParserDelegate.getResult()
+                        case .svWrestle:            self.allObjectDict[.svWrestle]          = rssParserDelegate.getResult()
+                        case .svFitness:            self.allObjectDict[.svFitness]          = rssParserDelegate.getResult()
+                        case .svSportLottery:       self.allObjectDict[.svSportLottery]     = rssParserDelegate.getResult()
+                        case .svCheerleading:       self.allObjectDict[.svCheerleading]     = rssParserDelegate.getResult()
+                        case .svSki:                self.allObjectDict[.svSki]              = rssParserDelegate.getResult()
+                        case .svHiking:             self.allObjectDict[.svHiking]           = rssParserDelegate.getResult()
+                        case .multiSports:          self.allObjectDict[.multiSports]        = rssParserDelegate.getResult()
+
                         }
                         DispatchQueue.main.async {
                             self.downCollectionView.reloadData()

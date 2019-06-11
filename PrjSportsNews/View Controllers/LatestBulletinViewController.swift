@@ -17,6 +17,7 @@ class LatestBulletinViewController: UIViewController {
     @IBOutlet weak var revisionInfoLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     
+    // Edit revision information here when updating the version each time
     let revisionInfo = [RevisionInfo(rev: "Rev 1.0.0", info: "Release")]
     
     override func viewDidLoad() {
