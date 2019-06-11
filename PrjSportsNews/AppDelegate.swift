@@ -17,7 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        GADMobileAds.configure(withApplicationID: "ca-app-pub-2373410982348314~9104418304") // App ID
+    
+        if UserDefaults.standard.bool(forKey: "FLAG_LOGIN") {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Storyboard的名稱
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NavigationOfViewController") // view 的 ID
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

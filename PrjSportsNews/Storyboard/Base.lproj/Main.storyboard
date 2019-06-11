@@ -232,7 +232,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Y4A-hi-Fck">
             <objects>
-                <navigationController id="yeb-Rr-nrt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationOfViewController" id="yeb-Rr-nrt" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JwC-XL-yaE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -636,7 +636,7 @@
         <!--Navigation Controller-->
         <scene sceneID="1J4-ZI-z5q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pzs-YN-rk9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationOfFirstPageViewController" automaticallyAdjustsScrollViewInsets="NO" id="pzs-YN-rk9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mJc-Mr-z2x">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

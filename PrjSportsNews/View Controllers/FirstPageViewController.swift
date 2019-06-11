@@ -14,6 +14,7 @@ class FirstPageViewController: UIViewController {
     
     @IBAction func okButton(_ sender: UIButton) {
         if checkBoxState {
+            UserDefaults.standard.set(true, forKey: "FLAG_LOGIN")
             performSegue(withIdentifier: "gotoPage2", sender: nil)
         }
     }
