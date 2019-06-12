@@ -83,9 +83,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="台灣體育新聞" id="jhy-Yd-dx4">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="bYN-8v-dh5">
-                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title="返回" id="RWT-T8-Jo1"/>
                         <barButtonItem key="leftBarButtonItem" image="About_Icon-App-60x60" id="1S3-qL-eex">
                             <inset key="imageInsets" minX="-14" minY="0.0" maxX="0.0" maxY="-2"/>
                             <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,7 +92,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="HJF-kv-wxo">
-                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.20995813608169556" green="0.4221406877040863" blue="0.73295706510543823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="rightBarButtonAction:" destination="BYZ-38-t0r" id="uua-q7-LKO"/>
                             </connections>
@@ -236,11 +234,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JwC-XL-yaE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.98750209710000003" green="1" blue="0.76712314000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.0" green="0.68361860510000005" blue="0.54536998270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.98769229650000001" green="0.99830824139999996" blue="0.76517081259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                            <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="textShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <color key="textColor" red="0.0" green="0.68361860510000005" blue="0.54536998270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -249,7 +247,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfG-JN-ZnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="16"/>
+            <point key="canvasLocation" x="-385" y="16"/>
         </scene>
         <!--First Page View Controller-->
         <scene sceneID="oVx-Qa-2FK">
@@ -260,9 +258,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台灣體育新聞" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRi-vg-wLR">
-                                <rect key="frame" x="135.5" y="83.5" width="104" height="21"/>
+                                <rect key="frame" x="112.5" y="83.5" width="150" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="F1Q-YE-Gn0"/>
+                                    <constraint firstAttribute="width" constant="150" id="F1Q-YE-Gn0"/>
                                     <constraint firstAttribute="height" constant="21" id="O0G-Dd-Vht"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -338,7 +336,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_Icon-App-60x60" translatesAutoresizingMaskIntoConstraints="NO" id="iak-Fg-yDN">
-                                <rect key="frame" x="65.5" y="64" width="60" height="60"/>
+                                <rect key="frame" x="67.5" y="64" width="60" height="60"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.84735500809999997" green="0.95264548059999998" blue="0.97251993420000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -347,7 +345,7 @@
                             <constraint firstItem="SO2-1v-d15" firstAttribute="top" secondItem="CEG-NH-B6O" secondAttribute="bottom" constant="10" id="B0b-pU-9I1"/>
                             <constraint firstItem="1ab-DX-EDB" firstAttribute="height" secondItem="Egv-rV-kOG" secondAttribute="height" multiplier="405:667" id="Bay-qR-xdu"/>
                             <constraint firstAttribute="trailing" secondItem="Rhy-KW-crN" secondAttribute="trailing" constant="5" id="Bdn-yl-wRO"/>
-                            <constraint firstItem="oRi-vg-wLR" firstAttribute="leading" secondItem="iak-Fg-yDN" secondAttribute="trailing" constant="10" id="BoQ-hv-Fvm"/>
+                            <constraint firstItem="oRi-vg-wLR" firstAttribute="leading" secondItem="iak-Fg-yDN" secondAttribute="trailing" constant="-15" id="BoQ-hv-Fvm"/>
                             <constraint firstItem="44M-7Z-Nu5" firstAttribute="top" secondItem="Rhy-KW-crN" secondAttribute="bottom" id="JND-BG-miP"/>
                             <constraint firstItem="iak-Fg-yDN" firstAttribute="top" secondItem="zfD-nx-61i" secondAttribute="top" id="M7b-1P-HD2"/>
                             <constraint firstItem="Rhy-KW-crN" firstAttribute="top" secondItem="sIX-Xt-EU4" secondAttribute="bottom" constant="10" id="MaJ-hZ-k9j"/>
@@ -641,7 +639,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mJc-Mr-z2x">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.84735500812530518" green="0.95264548063278198" blue="0.97251993417739868" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.0" green="0.68361860510000005" blue="0.54536998270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.98769229650000001" green="0.99830824139999996" blue="0.76517081259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <color key="textColor" red="0.0" green="0.68361860510000005" blue="0.54536998270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

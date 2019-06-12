@@ -145,7 +145,7 @@ class ViewController: UIViewController {
             PublishersInfo(publisher: "UDN(棒協賽事特報)",  address: "https://udn.com/rssfeed/news/2/7227/12960?ch=news",      logo:"Udn_Icon-App-60x60"),
             PublishersInfo(publisher: "UDN(NBA)",         address: "https://udn.com/rssfeed/news/2/7227/7002?ch=news",       logo:"Udn_Icon-App-60x60"),
             PublishersInfo(publisher: "UDN(棒球)",         address: "https://udn.com/rssfeed/news/2/7227/7001?ch=news",       logo:"Udn_Icon-App-60x60"),
-            PublishersInfo(publisher: "UDN(中職30年)",     address: "https://udn.com/rssfeed/news/2/7227/12822?ch=news",       logo:"Udn_Icon-App-60x60"),
+            PublishersInfo(publisher: "UDN(中職30年)",     address: "https://udn.com/rssfeed/news/2/7227/12822?ch=news",      logo:"Udn_Icon-App-60x60"),
             PublishersInfo(publisher: "UDN(MLB)",         address: "https://udn.com/rssfeed/news/2/7227/6999?ch=news",       logo:"Udn_Icon-App-60x60"),
             PublishersInfo(publisher: "UDN(籃球)",         address: "https://udn.com/rssfeed/news/2/7227/7003?ch=news",       logo:"Udn_Icon-App-60x60"),
             PublishersInfo(publisher: "UDN(綜合)",         address: "https://udn.com/rssfeed/news/2/7227/7005?ch=news",       logo:"Udn_Icon-App-60x60"),

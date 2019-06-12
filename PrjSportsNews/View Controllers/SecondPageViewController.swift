@@ -22,8 +22,8 @@ class SecondPageViewController: UIViewController {
 //        self.navigationController?.navigationBar.isTranslucent = false
 //        self.navigationController?.navigationBar.barTintColor = UIColor(red: 200, green: 70, blue: 61, alpha: 1.0)
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.red]
-        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+//        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.red]
+//        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
 
     }
     
